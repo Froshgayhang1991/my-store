@@ -103,6 +103,44 @@ h1 { text-align: center; font-size: 58px; font-weight: 900; color: #FFD700; text
   .invoice-buttons { flex-direction: column; }
   .invoice-btn { width: 100%; }
 }
+/* Invoice Item Styles with Quantity Controls */
+.invoice-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #ecf0f1; direction: rtl; gap: 15px; }
+.invoice-item:last-child { border-bottom: none; }
+.invoice-item-info { flex: 1; }
+.invoice-item-info strong { color: #2c3e50; font-size: 16px; display: block; margin-bottom: 5px; }
+.invoice-item-info small { color: #7f8c8d; font-size: 13px; }
+.invoice-item-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; min-width: 140px; }
+.invoice-quantity-controls { display: flex; align-items: center; gap: 8px; }
+.invoice-qty-btn { width: 35px; height: 35px; border: none; background: #3498db; color: white; font-size: 16px; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.invoice-qty-btn:hover { background: #2980b9; transform: scale(1.1); }
+.invoice-quantity { width: 60px; padding: 8px; text-align: center; border: 2px solid #3498db; border-radius: 6px; font-size: 14px; font-weight: 600; background: #f8f9fa; }
+.invoice-item-total { text-align: center; }
+.invoice-item-total strong { color: #e74c3c; font-size: 16px; }
+@media (max-width: 768px) { 
+  .invoice-item { flex-direction: column; align-items: stretch; text-align: right; gap: 10px; }
+  .invoice-item-controls { flex-direction: row; justify-content: space-between; align-items: center; min-width: auto; }
+  .invoice-quantity-controls { order: 2; }
+  .invoice-item-total { order: 1; }
+}
+/* Invoice Item Styles with Quantity Controls */
+.invoice-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #ecf0f1; direction: rtl; gap: 15px; }
+.invoice-item:last-child { border-bottom: none; }
+.invoice-item-info { flex: 1; }
+.invoice-item-info strong { color: #2c3e50; font-size: 16px; display: block; margin-bottom: 5px; }
+.invoice-item-info small { color: #7f8c8d; font-size: 13px; }
+.invoice-item-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; min-width: 140px; }
+.invoice-quantity-controls { display: flex; align-items: center; gap: 8px; }
+.invoice-qty-btn { width: 35px; height: 35px; border: none; background: #3498db; color: white; font-size: 16px; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+.invoice-qty-btn:hover { background: #2980b9; transform: scale(1.1); }
+.invoice-quantity { width: 60px; padding: 8px; text-align: center; border: 2px solid #3498db; border-radius: 6px; font-size: 14px; font-weight: 600; background: #f8f9fa; }
+.invoice-item-total { text-align: center; }
+.invoice-item-total strong { color: #e74c3c; font-size: 16px; }
+@media (max-width: 768px) { 
+  .invoice-item { flex-direction: column; align-items: stretch; text-align: right; gap: 10px; }
+  .invoice-item-controls { flex-direction: row; justify-content: space-between; align-items: center; min-width: auto; }
+  .invoice-quantity-controls { order: 2; }
+  .invoice-item-total { order: 1; }
+}
 </style>
 </head>
 <body>
@@ -231,7 +269,8 @@ function showInvoice() {
         code: input.dataset.code,
         price: price,
         qty: qty,
-        total: qty * price
+        total: qty * price,
+        inputId: input.id
       });
       totalPrice += qty * price;
       totalQty += qty;
@@ -243,43 +282,88 @@ function showInvoice() {
     return;
   }
 
-  // Update invoice date and time
   const now = new Date();
   const date = now.toLocaleDateString('en-GB');
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   document.getElementById('invoiceDateTime').textContent = date + ' - ' + time;
 
-  // Update agent info
   const selectedOption = agentSelect.options[agentSelect.selectedIndex];
   document.getElementById('invoiceAgentName').textContent = selectedOption.dataset.name;
   document.getElementById('invoiceAgentMobile').textContent = selectedOption.dataset.mobile;
   document.getElementById('invoiceAgentAddress').textContent = selectedOption.dataset.address;
 
-  // Update invoice items
   const invoiceItems = document.getElementById('invoiceItems');
   invoiceItems.innerHTML = '';
   products.forEach((product, index) => {
     const itemDiv = document.createElement('div');
     itemDiv.className = 'invoice-item';
     itemDiv.innerHTML = `
-      <div>
+      <div class='invoice-item-info'>
         <strong>${product.name}</strong><br>
-        <small>کۆد: ${product.code}</small>
+        <small>کۆد: ${product.code}</small><br>
+        <small>نرخ: ${product.price.toLocaleString()} دینار</small>
       </div>
-      <div>
-        <div>${product.qty} x ${product.price.toLocaleString()} دینار</div>
-        <strong>${product.total.toLocaleString()} دینار</strong>
+      <div class='invoice-item-controls'>
+        <div class='invoice-quantity-controls'>
+          <button type='button' class='invoice-qty-btn minus' onclick='decreaseInvoiceQuantity("${product.inputId}")'>-</button>
+          <input type='number' class='invoice-quantity' id='invoice_${product.inputId}' value='${product.qty}' min='0' onchange='updateInvoiceTotals()'>
+          <button type='button' class='invoice-qty-btn plus' onclick='increaseInvoiceQuantity("${product.inputId}")'>+</button>
+        </div>
+        <div class='invoice-item-total'>
+          <strong>${product.total.toLocaleString()} دینار</strong>
+        </div>
       </div>
     `;
     invoiceItems.appendChild(itemDiv);
   });
 
-  // Update totals
+  updateInvoiceTotals();
+
+  document.getElementById('invoiceModal').style.display = 'flex';
+}
+
+function increaseInvoiceQuantity(inputId) {
+  const invoiceInput = document.getElementById('invoice_' + inputId);
+  const mainInput = document.getElementById(inputId);
+  invoiceInput.value = parseInt(invoiceInput.value) + 1;
+  mainInput.value = invoiceInput.value;
+  updateInvoiceTotals();
+  updateCart();
+}
+
+function decreaseInvoiceQuantity(inputId) {
+  const invoiceInput = document.getElementById('invoice_' + inputId);
+  const mainInput = document.getElementById(inputId);
+  if (parseInt(invoiceInput.value) > 0) {
+    invoiceInput.value = parseInt(invoiceInput.value) - 1;
+    mainInput.value = invoiceInput.value;
+    updateInvoiceTotals();
+    updateCart();
+  }
+}
+
+function updateInvoiceTotals() {
+  let totalPrice = 0;
+  let totalQty = 0;
+  document.querySelectorAll('.invoice-quantity').forEach(input => {
+    const qty = parseInt(input.value) || 0;
+    const inputId = input.id.replace('invoice_', '');
+    const mainInput = document.getElementById(inputId);
+    const price = parseFloat(mainInput.dataset.price) || 0;
+    const itemTotal = qty * price;
+    
+    const itemTotalElement = input.closest('.invoice-item-controls').querySelector('.invoice-item-total strong');
+    if (itemTotalElement) {
+      itemTotalElement.textContent = itemTotal.toLocaleString() + ' دینار';
+    }
+    
+    if (qty > 0) {
+      totalPrice += itemTotal;
+      totalQty += qty;
+    }
+  });
   document.getElementById('invoiceTotalQty').textContent = totalQty;
   document.getElementById('invoiceTotalPrice').textContent = totalPrice.toLocaleString();
-
-  // Show modal
-  document.getElementById('invoiceModal').style.display = 'flex';
 }
 
 function closeInvoice() {
