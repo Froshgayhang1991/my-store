@@ -226,7 +226,14 @@ function filterAgents() {
     });
     dropdown.style.display = 'block';
   } else {
-    dropdown.innerHTML = '<div class="agent-dropdown-item">no_agents_found</div>';
+    // Check if the input contains English letters
+    const hasEnglishLetters = /[a-z]/.test(searchTerm);
+    
+    if (hasEnglishLetters) {
+      dropdown.innerHTML = '<div class="agent-dropdown-item">بیگۆڕە بۆ زمانى کوردی</div>';
+    } else {
+      dropdown.innerHTML = '<div class="agent-dropdown-item">مارکێتێک بەناوى ئەم پیتەوە نیە</div>';
+    }
     dropdown.style.display = 'block';
   }
 }
