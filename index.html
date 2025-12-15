@@ -103,6 +103,44 @@ h1 { text-align: center; font-size: 58px; font-weight: 900; color: #FFD700; text
 }
 /* Invoice Modal Styles */
 .invoice-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center; }
+/* Back to Categories Button with Image */
+.back-to-categories-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: none;
+  border: 2px solid white;
+}
+.back-to-categories-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f618d);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+.back-to-categories-btn img {
+  filter: brightness(0) invert(1); /* Makes image white */
+}
+@media (max-width: 768px) {
+  .back-to-categories-btn {
+    bottom: 80px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  .back-to-categories-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .invoice-content { background: white; padding: 25px; border-radius: 15px; max-width: 500px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3); direction: rtl; text-align: right; }
 .invoice-header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #3498db; padding-bottom: 15px; }
 .invoice-header h2 { color: #2c3e50; margin: 0 0 10px 0; font-size: 24px; font-weight: 700; }
@@ -206,6 +244,9 @@ h1 { text-align: center; font-size: 58px; font-weight: 900; color: #FFD700; text
 <button class='invoice-btn btn-send' onclick='sendToWhatsApp()'>ناردن بۆ واتساپ</button>
 </div>
 </div>
+</div>
+<div id='backToCategoriesBtn' class='back-to-categories-btn' onclick='scrollToCategories()' title='گەڕانەوە بۆ پۆلەکان'>
+  <img src='images/up-arrow.png' alt='?' style='width: 24px; height: 24px;'>
 </div>
 
 <script>
@@ -609,6 +650,50 @@ function sendToWhatsApp() {
   const phoneNumber = '9647507411341';
   const whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
   window.open(whatsappURL, '_blank');
+}
+// Show back button when scrolling down
+window.addEventListener('scroll', function() {
+  const backBtn = document.getElementById('backToCategoriesBtn');
+  
+  // Show button only when a category is selected and user has scrolled down
+  const isCategorySelected = Array.from(document.querySelectorAll('.category-section')).some(section => {
+    return !section.classList.contains('hidden');
+  });
+  
+  if (isCategorySelected && window.scrollY > 300) {
+    backBtn.style.display = 'flex';
+  } else {
+    backBtn.style.display = 'none';
+  }
+});
+
+// Scroll back to categories when button is clicked
+function scrollToCategories() {
+  const categoryButtons = document.getElementById('categoryButtons');
+  if (categoryButtons) {
+    categoryButtons.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
+
+// Hide button when switching categories
+function showCategory(category) {
+  const categoryMessage = document.getElementById('categoryMessage');
+  const backBtn = document.getElementById('backToCategoriesBtn');
+  
+  categoryMessage.style.display = 'none';
+  if (backBtn) backBtn.style.display = 'none';
+  
+  document.querySelectorAll('.category-section').forEach(section => {
+    if (section.dataset.category === category) {
+      section.classList.remove('hidden');
+    } else {
+      section.classList.add('hidden');
+    }
+  });
+  window.scrollTo({ top: document.getElementById('productsContainer').offsetTop - 20, behavior: 'smooth' });
 }
 </script>
 </body>
