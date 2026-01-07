@@ -342,18 +342,16 @@ function validateAndFindAgent(input) {
   // Update input with cleaned value
   input.value = code;
   
-  // Hide all sections initially
   agentDetails.style.display = 'none';
+  
   categoryButtons.style.display = 'none';
   categoryMessage.style.display = 'none';
   cartSection.style.display = 'none';
   if (backBtn) backBtn.style.display = 'none';
   document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
   
-  // Clear any previous selection
   agentSelect.value = '';
   
-  // Validate input - NOW 4 DIGITS
   if (code.length === 0) {
     errorDiv.style.display = 'none';
     return;
@@ -365,7 +363,6 @@ function validateAndFindAgent(input) {
     return;
   }
   
-  // Find agents matching the last FOUR digits
   const options = agentSelect.options;
   let matchingAgents = [];
   
@@ -382,7 +379,6 @@ function validateAndFindAgent(input) {
     }
   }
   
-  // Handle results
   if (matchingAgents.length === 0) {
     errorDiv.textContent = GetLabel('agent_not_found');
     errorDiv.style.display = 'block';
@@ -410,7 +406,7 @@ function showAgentConfirmation(agent) {
   // Store the agent value in a data attribute for confirmation
   agentDetails.setAttribute('data-agent-value', agent.value);
   
-  // Show confirmation section
+  // FIXED: Show confirmation section ONLY here
   agentDetails.style.display = 'block';
 }
 
