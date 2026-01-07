@@ -802,6 +802,14 @@ function scrollToCategories() {
     });
   }
 }
+// Force hide agent details on page load - MOBILE FIX
+window.addEventListener('load', function() {
+  const agentDetails = document.getElementById('agentDetails');
+  if (agentDetails) {
+    agentDetails.style.display = 'none';
+  }
+});
+
 </script>
 </body>
 </html>
