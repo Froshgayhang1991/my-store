@@ -33,7 +33,7 @@ h1 { text-align: center; font-size: 58px; font-weight: 900; color: #FFD700; text
 .agent-dropdown-item:hover { background: #3498db; color: white; }
 .agent-dropdown-item:last-child { border-bottom: none; }
 .highlight { color: #e74c3c; font-weight: bold; background-color: #fff3cd; padding: 1px 2px; border-radius: 2px; }
-.agent-details { margin-top: 20px; padding: 20px; color:black; font-size: 16px; backdrop-filter: blur(5px); display: none !important; }
+.agent-details { margin-top: 20px; padding: 20px; fon-color:black font-size: 16px; backdrop-filter: blur(5px);}
 .category-message { margin: 20px 0; padding: 25px; background: rgba(255, 234, 167, 0.5); border: none; border-radius: 15px; text-align: center; animation: pulse 2s infinite; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .category-message p { font-size: 26px; font-weight: bold; color: #2d3436; margin: 0; }
 .category-buttons-container { margin: 30px 0; padding: 25px; background: rgba(162, 155, 254, 0.5); border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
@@ -277,7 +277,7 @@ window.labels = {
 </div>
 </div>
 </div>
-<div class='agent-section'><h2>زانیاری کڕیار</h2><label>کۆدی کڕیار:</label><div class='code-input-section'><div class='code-input-section'><input type='text' id='agentCode' class='agent-code' maxlength='4' inputmode='numeric' autocomplete='off' placeholder='کۆتا ٤ ژمارەى موبایلەکەت بنووسە' onfocus='handleInputFocus()' oninput='validateAndFindAgent(this)'><div id='codeError' class='code-error' style='display:none;'></div></div><select id='agentSelect' class='agent-select' onchange='updateAgentInfo()' style='display:none;'><option value=''>select_agent</option><option value='100' data-name=' دایک مارکێت - دوو -' data-mobile='07501967071' data-address='کاک بڕوا' data-lastfour='7071'> دایک مارکێت - دوو -</option><option value='46' data-name=' فرۆشگاى شافعى' data-mobile='07512377106' data-address='شاکار' data-lastfour='7106'> فرۆشگاى شافعى</option><option value='69' data-name=' مارکێتى هەڵکەوت' data-mobile='07507270778' data-address='هەڵکەوت' data-lastfour='0778'> مارکێتى هەڵکەوت</option><option value='44' data-name=' کاک تەیمورى سیروان' data-mobile='07503052443' data-address='سیروان' data-lastfour='2443'> کاک تەیمورى سیروان</option><option value='42' data-name='karwan' data-mobile='07507411341' data-address='زانا' data-lastfour='1341'>karwan</option><option value='62' data-name='بازاڕى هێما' data-mobile='07512328653' data-address='كاك ئارام' data-lastfour='8653'>بازاڕى هێما</option><option value='1' data-name='باوه‌كۆچه‌ك' data-mobile='7503424844' data-address='هەڵەبجە - به‌رامبه‌ر' data-lastfour='4844'>باوه‌كۆچه‌ك</option><option value='3' data-name='چێشتخانەی هه‌ردی' data-mobile='7501120574' data-address='سه‌رجووتسایدی حمه‌خا' data-lastfour='0574'>چێشتخانەی هه‌ردی</option><option value='99' data-name='حانووتى شەهیدئازاد' data-mobile='07501266922' data-address='ملا ئومێد' data-lastfour='6922'>حانووتى شەهیدئازاد</option><option value='80' data-name='فرشگاى ئایە' data-mobile='07501241083' data-address='جیهاد' data-lastfour='1083'>فرشگاى ئایە</option><option value='87' data-name='فرۆشگاى باران-زەمەقى' data-mobile='07507594899' data-address='م.بیلال' data-lastfour='4899'>فرۆشگاى باران-زەمەقى</option><option value='86' data-name='فرۆشگاى دیار' data-mobile='07511109477' data-address='دیارڕزگار' data-lastfour='9477'>فرۆشگاى دیار</option><option value='97' data-name='قەرزە خەوتووەکان' data-mobile='' data-address='' data-lastfour=''>قەرزە خەوتووەکان</option><option value='50' data-name='ماركێتى ئاوا' data-mobile='07511884152' data-address='دیار-گۆران سیتی' data-lastfour='4152'>ماركێتى ئاوا</option><option value='6' data-name='ماركێتی په‌یام' data-mobile='7501234947' data-address='هه‌ڵه‌بجه‌' data-lastfour='4947'>ماركێتی په‌یام</option><option value='7' data-name='ماركێتی تاقانه‌' data-mobile='07503165135' data-address='مام ئاراس' data-lastfour='5135'>ماركێتی تاقانه‌</option><option value='8' data-name='ماركێتی مۆردین' data-mobile='7501122263' data-address='كیمیابارانی دوو' data-lastfour='2263'>ماركێتی مۆردین</option><option value='75' data-name='مارکێتى  باران' data-mobile='' data-address='یاسین-وەرزێر' data-lastfour=''>مارکێتى  باران</option><option value='93' data-name='مارکێتى ئالان-لەسیروان' data-mobile='07507937621' data-address='ئالان ڕەفیق' data-lastfour='7621'>مارکێتى ئالان-لەسیروان</option><option value='73' data-name='مارکێتى آیدین' data-mobile='07501084237' data-address='دانا' data-lastfour='4237'>مارکێتى آیدین</option><option value='55' data-name='مارکێتى ئەرینا' data-mobile='07502067461' data-address='شاخەوان' data-lastfour='7461'>مارکێتى ئەرینا</option><option value='23' data-name='مارکێتى ئەژین' data-mobile='07501081720' data-address='ئاکۆ' data-lastfour='1720'>مارکێتى ئەژین</option><option value='48' data-name='مارکێتى ئەشکەوڵ' data-mobile='07501838087' data-address='بەمۆ' data-lastfour='8087'>مارکێتى ئەشکەوڵ</option><option value='68' data-name='مارکێتى ئەوین' data-mobile='07501116840' data-address='حسن' data-lastfour='6840'>مارکێتى ئەوین</option><option value='29' data-name='مارکێتى ئەیمەن' data-mobile='07503728658' data-address='هێمن..گوڵان' data-lastfour='8658'>مارکێتى ئەیمەن</option><option value='95' data-name='مارکێتى باران-شارەوانى' data-mobile='07501205580' data-address='کاک ئەرسەلان' data-lastfour='5580'>مارکێتى باران-شارەوانى</option><option value='83' data-name='مارکێتى بڕوا-کیمیاباران ٢' data-mobile='07512172940' data-address='مام فتاح' data-lastfour='2940'>مارکێتى بڕوا-کیمیاباران ٢</option><option value='45' data-name='مارکێتى بەهەشت' data-mobile='07515167552' data-address='شۆڕش' data-lastfour='7552'>مارکێتى بەهەشت</option><option value='49' data-name='مارکێتى پارسا' data-mobile='07501528771' data-address='کاک مصطفى-گۆران سیتى' data-lastfour='8771'>مارکێتى پارسا</option><option value='94' data-name='مارکێتى جیهان' data-mobile='07507617686' data-address='کاکە بێستون' data-lastfour='7686'>مارکێتى جیهان</option><option value='92' data-name='مارکێتى زانیار' data-mobile='07510577455' data-address='زانیار قارەمان' data-lastfour='7455'>مارکێتى زانیار</option><option value='89' data-name='مارکێتى سعد' data-mobile='07507015624' data-address='سعد' data-lastfour='5624'>مارکێتى سعد</option><option value='84' data-name='مارکێتى سلام' data-mobile='07503164806' data-address='سلام' data-lastfour='4806'>مارکێتى سلام</option><option value='90' data-name='مارکێتى سەرا' data-mobile='07511919404' data-address='حمزە و چۆمان' data-lastfour='9404'>مارکێتى سەرا</option><option value='43' data-name='مارکێتى سەردار' data-mobile='07508773402' data-address='بەرامبەر داخلى کوڕان' data-lastfour='3402'>مارکێتى سەردار</option><option value='85' data-name='مارکێتى سەیوان' data-mobile='' data-address='سەیوان شریف' data-lastfour=''>مارکێتى سەیوان</option><option value='82' data-name='مارکێتى شارۆ' data-mobile='07511107239' data-address='شارۆشەوکەت' data-lastfour='7239'>مارکێتى شارۆ</option><option value='14' data-name='مارکێتى شەهیدان' data-mobile='07501466273' data-address='کاربین فاروق' data-lastfour='6273'>مارکێتى شەهیدان</option><option value='101' data-name='مارکێتى عبداللە' data-mobile='07501118944' data-address='کاک عبداللە' data-lastfour='8944'>مارکێتى عبداللە</option><option value='71' data-name='مارکێتى فەرمانبەران' data-mobile='07501643139' data-address='ڕاستگۆ' data-lastfour='3139'>مارکێتى فەرمانبەران</option><option value='33' data-name='مارکێتى كارزان' data-mobile='07501035123' data-address='كاك كارزان' data-lastfour='5123'>مارکێتى كارزان</option><option value='78' data-name='مارکێتى لانە' data-mobile='07501734136' data-address='کاک صدیق' data-lastfour='4136'>مارکێتى لانە</option><option value='59' data-name='مارکێتى میلانۆ' data-mobile='07503235566' data-address='گۆران' data-lastfour='5566'>مارکێتى میلانۆ</option><option value='52' data-name='مارکێتى هاوچەرخ' data-mobile='07501494560' data-address='ئەنەس' data-lastfour='4560'>مارکێتى هاوچەرخ</option><option value='104' data-name='مارکێتى هەمووان' data-mobile='07501121888' data-address='کاک خلیل' data-lastfour='1888'>مارکێتى هەمووان</option><option value='67' data-name='مارکێتى هەنار' data-mobile='07501643093' data-address='بیلال' data-lastfour='3093'>مارکێتى هەنار</option><option value='81' data-name='مارکێتى هەنى' data-mobile='07501053842' data-address='شکار' data-lastfour='3842'>مارکێتى هەنى</option><option value='15' data-name='مارکێتى وینا' data-mobile='07501208380' data-address='کاکەجومعە' data-lastfour='8380'>مارکێتى وینا</option><option value='53' data-name='مارکێتى ڕێبوار' data-mobile='07501701709' data-address='ڕزگار' data-lastfour='1709'>مارکێتى ڕێبوار</option><option value='76' data-name='مارکێتى کانى' data-mobile='07501127516' data-address='مامۆستاهێمن' data-lastfour='7516'>مارکێتى کانى</option><option value='12' data-name='مارکێتى کانى قوڵکە' data-mobile='07501767605' data-address='خەڵات' data-lastfour='7605'>مارکێتى کانى قوڵکە</option><option value='17' data-name='مارکێتى کانیس' data-mobile='7503183954' data-address='هەڵەبجە' data-lastfour='3954'>مارکێتى کانیس</option><option value='63' data-name='مارکێتى یاران' data-mobile='07501939450' data-address='فاروق' data-lastfour='9450'>مارکێتى یاران</option><option value='61' data-name='مامەفاخرى شارەوانى' data-mobile='07503146772' data-address='فاخر' data-lastfour='6772'>مامەفاخرى شارەوانى</option><option value='79' data-name='ماکێتى ١٦ى٣' data-mobile='07512316904' data-address='لوقمان' data-lastfour='6904'>ماکێتى ١٦ى٣</option><option value='77' data-name='ماکێتى ڕۆزى' data-mobile='07501266941' data-address='هاوکار-شعیب' data-lastfour='6941'>ماکێتى ڕۆزى</option><option value='28' data-name='ماڵى خێزان' data-mobile='7501864252' data-address='ئەردەڵان' data-lastfour='4252'>ماڵى خێزان</option><option value='21' data-name='مينى ماركێتى ئازیز گیان' data-mobile='07501169296' data-address='ئاسۆ' data-lastfour='9296'>مينى ماركێتى ئازیز گیان</option><option value='60' data-name='مینى ماکێتى ڕاستى' data-mobile='07501760786' data-address='احسان' data-lastfour='0786'>مینى ماکێتى ڕاستى</option><option value='103' data-name='نارین مارکێت' data-mobile='07501164053' data-address='کاکە هێمن' data-lastfour='4053'>نارین مارکێت</option><option value='96' data-name='ه.ز.بازاڕى باران-سیروان' data-mobile='07503097157' data-address='ئاسۆ-أشهد' data-lastfour='7157'>ه.ز.بازاڕى باران-سیروان</option><option value='22' data-name='هه‌فته‌بازاڕی دایك' data-mobile='7501074464' data-address='هه‌ڵه‌بجه‌-گه‌ڕه‌كی ' data-lastfour='4464'>هه‌فته‌بازاڕی دایك</option><option value='30' data-name='هە رزان بازاڕى محمد' data-mobile='7510440906' data-address='هەڵەبجە-بەرامبەر احم' data-lastfour='0906'>هە رزان بازاڕى محمد</option><option value='58' data-name='هەرزان بازاڕى بەختیارى' data-mobile='07503364161' data-address='محمد' data-lastfour='4161'>هەرزان بازاڕى بەختیارى</option><option value='57' data-name='هەرزان بازاڕى مەحوى' data-mobile='07501538775' data-address='محمد-هاوکار-ئاکام' data-lastfour='8775'>هەرزان بازاڕى مەحوى</option><option value='70' data-name='هەرزان بازاڕى ناوازە' data-mobile='07511961475' data-address='اکرام' data-lastfour='1475'>هەرزان بازاڕى ناوازە</option><option value='19' data-name='هەرزان بازاڕى کیمیاباران' data-mobile='7501723877' data-address='کاک عبداللە' data-lastfour='3877'>هەرزان بازاڕى کیمیاباران</option><option value='102' data-name='هەفتە بازاڕى ئەوین' data-mobile='07501164053' data-address='کاک هێمن' data-lastfour='4053'>هەفتە بازاڕى ئەوین</option><option value='56' data-name='هەفتە بازاڕى هیوا' data-mobile='07503148677' data-address='حاجى نجم الدین' data-lastfour='8677'>هەفتە بازاڕى هیوا</option><option value='47' data-name='هەفتەبازارى گوڵى هەڵەبجە' data-mobile='07501126473' data-address='محمد' data-lastfour='6473'>هەفتەبازارى گوڵى هەڵەبجە</option><option value='2' data-name='هەفتەبازاڕى باوک' data-mobile='7510200511' data-address='كاک ئەیوب' data-lastfour='0511'>هەفتەبازاڕى باوک</option><option value='66' data-name='هەفتەبازاڕى ژێکاف' data-mobile='' data-address='شاخەوان' data-lastfour=''>هەفتەبازاڕى ژێکاف</option><option value='41' data-name='هەفتەبازاڕى شەماڵ' data-mobile='07503268940' data-address='کاک شاڵاو' data-lastfour='8940'>هەفتەبازاڕى شەماڵ</option><option value='26' data-name='هەفتەبازاڕى هەڵەبجە' data-mobile='07501560585' data-address='کاک هیوا' data-lastfour='0585'>هەفتەبازاڕى هەڵەبجە</option><option value='35' data-name='هەفتەبازاڕی سیروان' data-mobile='07501643134' data-address='سيروان' data-lastfour='3134'>هەفتەبازاڕی سیروان</option><option value='91' data-name='هەفتەبازاڕی هەنى' data-mobile='07702136378' data-address='مهدی' data-lastfour='6378'>هەفتەبازاڕی هەنى</option><option value='98' data-name='وەن مارکێت' data-mobile='07501484144' data-address='دیار' data-lastfour='4144'>وەن مارکێت</option><option value='32' data-name='ڕاستەوخۆ' data-mobile='' data-address='' data-lastfour=''>ڕاستەوخۆ</option><option value='72' data-name='کاکەبەڵێن مەولود' data-mobile='' data-address='بەڵێن' data-lastfour=''>کاکەبەڵێن مەولود</option></select><div id='agentDetails' class='agent-details' style='display:none;'><div class='agent-confirmation'><h3>دڵنیابوونەوەی کڕیار</h3><p><strong>ناو:</strong> <span id='confirmAgentName'></span></p><p><strong>موبایل:</strong> <span id='confirmAgentMobile'></span></p><p><strong>خاوەنى:</strong> <span id='confirmAgentAddress'></span></p><div class='confirmation-buttons'><button type='button' class='confirm-btn' onclick='confirmAgentSelection()'>دڵنیام</button><button type='button' class='cancel-btn' onclick='cancelAgentSelection()'>پاشگەزبوونەوە</button></div></div></div></div>
+<div class='agent-section'><h2>زانیاری کڕیار</h2><label>کۆدی کڕیار:</label><div class='code-input-section'><input type='text' id='agentCode' class='agent-code' maxlength='4' inputmode='numeric' autocomplete='off' placeholder='کۆتا ٤ ژمارەى موبایلەکەت بنووسە' onkeyup='validateAndFindAgent(this)' onfocus='handleInputFocus()' oninput='validateAndFindAgent(this)'><div id='codeError' class='code-error' style='display:none;'></div></div><select id='agentSelect' class='agent-select' onchange='updateAgentInfo()' style='display:none;'><option value=''>select_agent</option><option value='100' data-name=' دایک مارکێت - دوو -' data-mobile='07501967071' data-address='کاک بڕوا' data-lastfour='7071'> دایک مارکێت - دوو -</option><option value='46' data-name=' فرۆشگاى شافعى' data-mobile='07512377106' data-address='شاکار' data-lastfour='7106'> فرۆشگاى شافعى</option><option value='69' data-name=' مارکێتى هەڵکەوت' data-mobile='07507270778' data-address='هەڵکەوت' data-lastfour='0778'> مارکێتى هەڵکەوت</option><option value='44' data-name=' کاک تەیمورى سیروان' data-mobile='07503052443' data-address='سیروان' data-lastfour='2443'> کاک تەیمورى سیروان</option><option value='42' data-name='karwan' data-mobile='07507411341' data-address='زانا' data-lastfour='1341'>karwan</option><option value='62' data-name='بازاڕى هێما' data-mobile='07512328653' data-address='كاك ئارام' data-lastfour='8653'>بازاڕى هێما</option><option value='1' data-name='باوه‌كۆچه‌ك' data-mobile='7503424844' data-address='هەڵەبجە - به‌رامبه‌ر' data-lastfour='4844'>باوه‌كۆچه‌ك</option><option value='3' data-name='چێشتخانەی هه‌ردی' data-mobile='7501120574' data-address='سه‌رجووتسایدی حمه‌خا' data-lastfour='0574'>چێشتخانەی هه‌ردی</option><option value='99' data-name='حانووتى شەهیدئازاد' data-mobile='07501266922' data-address='ملا ئومێد' data-lastfour='6922'>حانووتى شەهیدئازاد</option><option value='80' data-name='فرشگاى ئایە' data-mobile='07501241083' data-address='جیهاد' data-lastfour='1083'>فرشگاى ئایە</option><option value='87' data-name='فرۆشگاى باران-زەمەقى' data-mobile='07507594899' data-address='م.بیلال' data-lastfour='4899'>فرۆشگاى باران-زەمەقى</option><option value='86' data-name='فرۆشگاى دیار' data-mobile='07511109477' data-address='دیارڕزگار' data-lastfour='9477'>فرۆشگاى دیار</option><option value='97' data-name='قەرزە خەوتووەکان' data-mobile='' data-address='' data-lastfour=''>قەرزە خەوتووەکان</option><option value='50' data-name='ماركێتى ئاوا' data-mobile='07511884152' data-address='دیار-گۆران سیتی' data-lastfour='4152'>ماركێتى ئاوا</option><option value='6' data-name='ماركێتی په‌یام' data-mobile='7501234947' data-address='هه‌ڵه‌بجه‌' data-lastfour='4947'>ماركێتی په‌یام</option><option value='7' data-name='ماركێتی تاقانه‌' data-mobile='07503165135' data-address='مام ئاراس' data-lastfour='5135'>ماركێتی تاقانه‌</option><option value='8' data-name='ماركێتی مۆردین' data-mobile='7501122263' data-address='كیمیابارانی دوو' data-lastfour='2263'>ماركێتی مۆردین</option><option value='75' data-name='مارکێتى  باران' data-mobile='' data-address='یاسین-وەرزێر' data-lastfour=''>مارکێتى  باران</option><option value='93' data-name='مارکێتى ئالان-لەسیروان' data-mobile='07507937621' data-address='ئالان ڕەفیق' data-lastfour='7621'>مارکێتى ئالان-لەسیروان</option><option value='73' data-name='مارکێتى آیدین' data-mobile='07501084237' data-address='دانا' data-lastfour='4237'>مارکێتى آیدین</option><option value='55' data-name='مارکێتى ئەرینا' data-mobile='07502067461' data-address='شاخەوان' data-lastfour='7461'>مارکێتى ئەرینا</option><option value='23' data-name='مارکێتى ئەژین' data-mobile='07501081720' data-address='ئاکۆ' data-lastfour='1720'>مارکێتى ئەژین</option><option value='48' data-name='مارکێتى ئەشکەوڵ' data-mobile='07501838087' data-address='بەمۆ' data-lastfour='8087'>مارکێتى ئەشکەوڵ</option><option value='68' data-name='مارکێتى ئەوین' data-mobile='07501116840' data-address='حسن' data-lastfour='6840'>مارکێتى ئەوین</option><option value='29' data-name='مارکێتى ئەیمەن' data-mobile='07503728658' data-address='هێمن..گوڵان' data-lastfour='8658'>مارکێتى ئەیمەن</option><option value='95' data-name='مارکێتى باران-شارەوانى' data-mobile='07501205580' data-address='کاک ئەرسەلان' data-lastfour='5580'>مارکێتى باران-شارەوانى</option><option value='83' data-name='مارکێتى بڕوا-کیمیاباران ٢' data-mobile='07512172940' data-address='مام فتاح' data-lastfour='2940'>مارکێتى بڕوا-کیمیاباران ٢</option><option value='45' data-name='مارکێتى بەهەشت' data-mobile='07515167552' data-address='شۆڕش' data-lastfour='7552'>مارکێتى بەهەشت</option><option value='49' data-name='مارکێتى پارسا' data-mobile='07501528771' data-address='کاک مصطفى-گۆران سیتى' data-lastfour='8771'>مارکێتى پارسا</option><option value='94' data-name='مارکێتى جیهان' data-mobile='07507617686' data-address='کاکە بێستون' data-lastfour='7686'>مارکێتى جیهان</option><option value='92' data-name='مارکێتى زانیار' data-mobile='07510577455' data-address='زانیار قارەمان' data-lastfour='7455'>مارکێتى زانیار</option><option value='89' data-name='مارکێتى سعد' data-mobile='07507015624' data-address='سعد' data-lastfour='5624'>مارکێتى سعد</option><option value='84' data-name='مارکێتى سلام' data-mobile='07503164806' data-address='سلام' data-lastfour='4806'>مارکێتى سلام</option><option value='90' data-name='مارکێتى سەرا' data-mobile='07511919404' data-address='حمزە و چۆمان' data-lastfour='9404'>مارکێتى سەرا</option><option value='43' data-name='مارکێتى سەردار' data-mobile='07508773402' data-address='بەرامبەر داخلى کوڕان' data-lastfour='3402'>مارکێتى سەردار</option><option value='85' data-name='مارکێتى سەیوان' data-mobile='' data-address='سەیوان شریف' data-lastfour=''>مارکێتى سەیوان</option><option value='82' data-name='مارکێتى شارۆ' data-mobile='07511107239' data-address='شارۆشەوکەت' data-lastfour='7239'>مارکێتى شارۆ</option><option value='14' data-name='مارکێتى شەهیدان' data-mobile='07501466273' data-address='کاربین فاروق' data-lastfour='6273'>مارکێتى شەهیدان</option><option value='101' data-name='مارکێتى عبداللە' data-mobile='07501118944' data-address='کاک عبداللە' data-lastfour='8944'>مارکێتى عبداللە</option><option value='71' data-name='مارکێتى فەرمانبەران' data-mobile='07501643139' data-address='ڕاستگۆ' data-lastfour='3139'>مارکێتى فەرمانبەران</option><option value='33' data-name='مارکێتى كارزان' data-mobile='07501035123' data-address='كاك كارزان' data-lastfour='5123'>مارکێتى كارزان</option><option value='78' data-name='مارکێتى لانە' data-mobile='07501734136' data-address='کاک صدیق' data-lastfour='4136'>مارکێتى لانە</option><option value='59' data-name='مارکێتى میلانۆ' data-mobile='07503235566' data-address='گۆران' data-lastfour='5566'>مارکێتى میلانۆ</option><option value='52' data-name='مارکێتى هاوچەرخ' data-mobile='07501494560' data-address='ئەنەس' data-lastfour='4560'>مارکێتى هاوچەرخ</option><option value='104' data-name='مارکێتى هەمووان' data-mobile='07501121888' data-address='کاک خلیل' data-lastfour='1888'>مارکێتى هەمووان</option><option value='67' data-name='مارکێتى هەنار' data-mobile='07501643093' data-address='بیلال' data-lastfour='3093'>مارکێتى هەنار</option><option value='81' data-name='مارکێتى هەنى' data-mobile='07501053842' data-address='شکار' data-lastfour='3842'>مارکێتى هەنى</option><option value='15' data-name='مارکێتى وینا' data-mobile='07501208380' data-address='کاکەجومعە' data-lastfour='8380'>مارکێتى وینا</option><option value='53' data-name='مارکێتى ڕێبوار' data-mobile='07501701709' data-address='ڕزگار' data-lastfour='1709'>مارکێتى ڕێبوار</option><option value='76' data-name='مارکێتى کانى' data-mobile='07501127516' data-address='مامۆستاهێمن' data-lastfour='7516'>مارکێتى کانى</option><option value='12' data-name='مارکێتى کانى قوڵکە' data-mobile='07501767605' data-address='خەڵات' data-lastfour='7605'>مارکێتى کانى قوڵکە</option><option value='17' data-name='مارکێتى کانیس' data-mobile='7503183954' data-address='هەڵەبجە' data-lastfour='3954'>مارکێتى کانیس</option><option value='63' data-name='مارکێتى یاران' data-mobile='07501939450' data-address='فاروق' data-lastfour='9450'>مارکێتى یاران</option><option value='61' data-name='مامەفاخرى شارەوانى' data-mobile='07503146772' data-address='فاخر' data-lastfour='6772'>مامەفاخرى شارەوانى</option><option value='79' data-name='ماکێتى ١٦ى٣' data-mobile='07512316904' data-address='لوقمان' data-lastfour='6904'>ماکێتى ١٦ى٣</option><option value='77' data-name='ماکێتى ڕۆزى' data-mobile='07501266941' data-address='هاوکار-شعیب' data-lastfour='6941'>ماکێتى ڕۆزى</option><option value='28' data-name='ماڵى خێزان' data-mobile='7501864252' data-address='ئەردەڵان' data-lastfour='4252'>ماڵى خێزان</option><option value='21' data-name='مينى ماركێتى ئازیز گیان' data-mobile='07501169296' data-address='ئاسۆ' data-lastfour='9296'>مينى ماركێتى ئازیز گیان</option><option value='60' data-name='مینى ماکێتى ڕاستى' data-mobile='07501760786' data-address='احسان' data-lastfour='0786'>مینى ماکێتى ڕاستى</option><option value='103' data-name='نارین مارکێت' data-mobile='07501164053' data-address='کاکە هێمن' data-lastfour='4053'>نارین مارکێت</option><option value='96' data-name='ه.ز.بازاڕى باران-سیروان' data-mobile='07503097157' data-address='ئاسۆ-أشهد' data-lastfour='7157'>ه.ز.بازاڕى باران-سیروان</option><option value='22' data-name='هه‌فته‌بازاڕی دایك' data-mobile='7501074464' data-address='هه‌ڵه‌بجه‌-گه‌ڕه‌كی ' data-lastfour='4464'>هه‌فته‌بازاڕی دایك</option><option value='30' data-name='هە رزان بازاڕى محمد' data-mobile='7510440906' data-address='هەڵەبجە-بەرامبەر احم' data-lastfour='0906'>هە رزان بازاڕى محمد</option><option value='58' data-name='هەرزان بازاڕى بەختیارى' data-mobile='07503364161' data-address='محمد' data-lastfour='4161'>هەرزان بازاڕى بەختیارى</option><option value='57' data-name='هەرزان بازاڕى مەحوى' data-mobile='07501538775' data-address='محمد-هاوکار-ئاکام' data-lastfour='8775'>هەرزان بازاڕى مەحوى</option><option value='70' data-name='هەرزان بازاڕى ناوازە' data-mobile='07511961475' data-address='اکرام' data-lastfour='1475'>هەرزان بازاڕى ناوازە</option><option value='19' data-name='هەرزان بازاڕى کیمیاباران' data-mobile='7501723877' data-address='کاک عبداللە' data-lastfour='3877'>هەرزان بازاڕى کیمیاباران</option><option value='102' data-name='هەفتە بازاڕى ئەوین' data-mobile='07501164053' data-address='کاک هێمن' data-lastfour='4053'>هەفتە بازاڕى ئەوین</option><option value='56' data-name='هەفتە بازاڕى هیوا' data-mobile='07503148677' data-address='حاجى نجم الدین' data-lastfour='8677'>هەفتە بازاڕى هیوا</option><option value='47' data-name='هەفتەبازارى گوڵى هەڵەبجە' data-mobile='07501126473' data-address='محمد' data-lastfour='6473'>هەفتەبازارى گوڵى هەڵەبجە</option><option value='2' data-name='هەفتەبازاڕى باوک' data-mobile='7510200511' data-address='كاک ئەیوب' data-lastfour='0511'>هەفتەبازاڕى باوک</option><option value='66' data-name='هەفتەبازاڕى ژێکاف' data-mobile='' data-address='شاخەوان' data-lastfour=''>هەفتەبازاڕى ژێکاف</option><option value='41' data-name='هەفتەبازاڕى شەماڵ' data-mobile='07503268940' data-address='کاک شاڵاو' data-lastfour='8940'>هەفتەبازاڕى شەماڵ</option><option value='26' data-name='هەفتەبازاڕى هەڵەبجە' data-mobile='07501560585' data-address='کاک هیوا' data-lastfour='0585'>هەفتەبازاڕى هەڵەبجە</option><option value='35' data-name='هەفتەبازاڕی سیروان' data-mobile='07501643134' data-address='سيروان' data-lastfour='3134'>هەفتەبازاڕی سیروان</option><option value='91' data-name='هەفتەبازاڕی هەنى' data-mobile='07702136378' data-address='مهدی' data-lastfour='6378'>هەفتەبازاڕی هەنى</option><option value='98' data-name='وەن مارکێت' data-mobile='07501484144' data-address='دیار' data-lastfour='4144'>وەن مارکێت</option><option value='32' data-name='ڕاستەوخۆ' data-mobile='' data-address='' data-lastfour=''>ڕاستەوخۆ</option><option value='72' data-name='کاکەبەڵێن مەولود' data-mobile='' data-address='بەڵێن' data-lastfour=''>کاکەبەڵێن مەولود</option></select><div id='agentDetails' class='agent-details' style='display:none;'><div class='agent-confirmation'><h3>دڵنیابوونەوەی کڕیار</h3><p><strong>ناو:</strong> <span id='confirmAgentName'></span></p><p><strong>موبایل:</strong> <span id='confirmAgentMobile'></span></p><p><strong>خاوەنى:</strong> <span id='confirmAgentAddress'></span></p><div class='confirmation-buttons'><button type='button' class='confirm-btn' onclick='confirmAgentSelection()'>دڵنیام</button><button type='button' class='cancel-btn' onclick='cancelAgentSelection()'>پاشگەزبوونەوە</button></div></div></div></div>
 <div id='categoryMessage' class='category-message' style='display:none;'>
 <p>لە خوارەوە جۆرى کاڵا هەڵبژێرە</p>
 </div>
@@ -323,90 +323,99 @@ window.labels = {
 
 <script>
 function GetLabel(key) {
-  if (window.labels && window.labels[key]) return window.labels[key];
-  return key;
+  if (window.labels && window.labels[key]) {
+    return window.labels[key];
+  }
+  return key; // fallback to the key
 }
 
 function handleInputFocus() {
-  const d = document.getElementById('agentDetails');
-  if (d) d.style.display = 'none';
-  const e = document.getElementById('codeError');
-  if (e) e.style.display = 'none';
+  const agentDetails = document.getElementById('agentDetails');
+  const errorDiv = document.getElementById('codeError');
+  const categoryButtons = document.getElementById('categoryButtons');
+  const categoryMessage = document.getElementById('categoryMessage');
+  const cartSection = document.getElementById('cartSection');
+  const backBtn = document.getElementById('backToCategoriesBtn');
+  
+  agentDetails.style.display = 'none';
+  errorDiv.style.display = 'none';
+  categoryButtons.style.display = 'none';
+  categoryMessage.style.display = 'none';
+  cartSection.style.display = 'none';
+  if (backBtn) backBtn.style.display = 'none';
+  document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
+  document.getElementById('agentSelect').value = '';
 }
 
 function validateAndFindAgent(input) {
-  const code = input.value.replace(/\D/g, '');
-  input.value = code; // Force clean value
-  
-  const agentDetails = document.getElementById('agentDetails');
+  const code = input.value.replace(/\D/g, ''); // Remove non-digits
   const errorDiv = document.getElementById('codeError');
+  const agentDetails = document.getElementById('agentDetails');
   const agentSelect = document.getElementById('agentSelect');
   const categoryButtons = document.getElementById('categoryButtons');
   const categoryMessage = document.getElementById('categoryMessage');
   const cartSection = document.getElementById('cartSection');
   const backBtn = document.getElementById('backToCategoriesBtn');
   
-  if (code.length === 0) {
-    if (agentDetails) agentDetails.style.display = 'none';
-    if (errorDiv) errorDiv.style.display = 'none';
-    if (categoryButtons) categoryButtons.style.display = 'none';
-    if (categoryMessage) categoryMessage.style.display = 'none';
-    if (cartSection) cartSection.style.display = 'none';
-    if (backBtn) backBtn.style.display = 'none';
-    if (agentSelect) agentSelect.value = '';
-    document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
-    return;
-  }
+  agentDetails.style.display = 'none';
+  errorDiv.style.display = 'none';
+  
+  // Update input with cleaned value
+  input.value = code;
   
   if (code.length < 4) {
-    if (agentDetails) agentDetails.style.display = 'none';
-    if (errorDiv) {
-      errorDiv.textContent = GetLabel('code_too_short');
-      errorDiv.style.display = 'block';
-    }
-    if (categoryButtons) categoryButtons.style.display = 'none';
-    if (categoryMessage) categoryMessage.style.display = 'none';
-    if (cartSection) cartSection.style.display = 'none';
+    categoryButtons.style.display = 'none';
+    categoryMessage.style.display = 'none';
+    cartSection.style.display = 'none';
     if (backBtn) backBtn.style.display = 'none';
-    if (agentSelect) agentSelect.value = '';
     document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
+    agentSelect.value = '';
+    
+    if (code.length > 0) {
+       errorDiv.textContent = GetLabel('code_too_short');
+       errorDiv.style.display = 'block';
+    }
     return;
   }
   
+  const options = agentSelect.options;
   let matchingAgents = [];
-  if (agentSelect) {
-    for (let i = 0; i < agentSelect.options.length; i++) {
-      const opt = agentSelect.options[i];
-      if (opt.value && opt.dataset.lastfour === code) {
-        matchingAgents.push({
-          value: opt.value,
-          text: opt.text,
-          mobile: opt.dataset.mobile,
-          address: opt.dataset.address
-        });
-      }
+  
+  for (let i = 0; i < options.length; i++) {
+    const option = options[i];
+    if (option.value && option.dataset.lastfour === code) {
+      matchingAgents.push({
+        element: option,
+        value: option.value,
+        text: option.text,
+        mobile: option.dataset.mobile,
+        address: option.dataset.address
+      });
     }
   }
   
   if (matchingAgents.length === 0) {
-    if (errorDiv) {
-      errorDiv.textContent = GetLabel('agent_not_found');
-      errorDiv.style.display = 'block';
-    }
-    if (agentDetails) agentDetails.style.display = 'none';
+    errorDiv.textContent = GetLabel('agent_not_found');
+    errorDiv.style.display = 'block';
+    agentDetails.style.display = 'none';
   } else {
-    if (errorDiv) errorDiv.style.display = 'none';
+    errorDiv.style.display = 'none';
     showAgentConfirmation(matchingAgents[0]);
   }
 }
 
 function showAgentConfirmation(agent) {
   const agentDetails = document.getElementById('agentDetails');
-  if (!agentDetails) return;
+  
+  // Fill confirmation details
   document.getElementById('confirmAgentName').textContent = agent.text;
   document.getElementById('confirmAgentMobile').textContent = agent.mobile;
   document.getElementById('confirmAgentAddress').textContent = agent.address;
+  
+  // Store the agent value in a data attribute for confirmation
   agentDetails.setAttribute('data-agent-value', agent.value);
+  
+  // Show confirmation section
   agentDetails.style.display = 'block';
 }
 
@@ -420,14 +429,21 @@ function confirmAgentSelection() {
   const backBtn = document.getElementById('backToCategoriesBtn');
   
   const agentValue = agentDetails.getAttribute('data-agent-value');
-  if (agentValue && agentSelect) {
+  
+  if (agentValue) {
     agentSelect.value = agentValue;
-    if (errorDiv) errorDiv.style.display = 'none';
-    if (agentDetails) agentDetails.style.display = 'none';
-    if (categoryMessage) categoryMessage.style.display = 'block';
-    if (categoryButtons) categoryButtons.style.display = 'block';
-    if (cartSection) cartSection.style.display = 'none';
+    
+    // Hide error and confirmation
+    errorDiv.style.display = 'none';
+    agentDetails.style.display = 'none';
+    
+    // Show other sections BUT NOT CART SECTION
+    categoryMessage.style.display = 'block';
+    categoryButtons.style.display = 'block';
+    cartSection.style.display = 'none'; // DO NOT SHOW CART SECTION
     if (backBtn) backBtn.style.display = 'none';
+    
+    // Update invoice with agent info
     updateAgentInfo();
   }
 }
@@ -440,16 +456,23 @@ function cancelAgentSelection() {
   const backBtn = document.getElementById('backToCategoriesBtn');
   const cartSection = document.getElementById('cartSection');
   
-  if (agentDetails) agentDetails.style.display = 'none';
-  if (agentSelect) agentSelect.value = '';
-  if (input) input.value = '';
-  if (errorDiv) errorDiv.style.display = 'none';
+  // Clear everything
+  agentDetails.style.display = 'none';
+  agentSelect.value = '';
+  input.value = '';
+  errorDiv.style.display = 'none';
   if (backBtn) backBtn.style.display = 'none';
-  if (cartSection) cartSection.style.display = 'none';
-  if (categoryButtons) categoryButtons.style.display = 'none';
-  if (categoryMessage) categoryMessage.style.display = 'none';
+  
+  // Hide cart section
+  cartSection.style.display = 'none';
+  
+  // Hide other sections
+  document.getElementById('categoryButtons').style.display = 'none';
+  document.getElementById('categoryMessage').style.display = 'none';
   document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
-  if (input) input.focus();
+  
+  // Focus back on code input
+  input.focus();
 }
 
 function updateAgentInfo() {
@@ -459,22 +482,31 @@ function updateAgentInfo() {
   const categoryMessage = document.getElementById('categoryMessage');
   const cartSection = document.getElementById('cartSection');
   
-  if (select && select.value) {
+  if (select.value) {
     const option = select.options[select.selectedIndex];
     document.getElementById('agentMobile').textContent = option.dataset.mobile;
     document.getElementById('agentAddress').textContent = option.dataset.address;
-    if (details) details.style.display = 'block';
-    if (categoryMessage) categoryMessage.style.display = 'block';
-    if (categoryButtons) categoryButtons.style.display = 'block';
-    if (cartSection) cartSection.style.display = 'none';
+    details.style.display = 'block';
+    categoryMessage.style.display = 'block';
+    categoryButtons.style.display = 'block';
+    // DO NOT show cart section here
+    cartSection.style.display = 'none';
+  } else {
+    details.style.display = 'none';
+    categoryMessage.style.display = 'none';
+    categoryButtons.style.display = 'none';
+    cartSection.style.display = 'none';
+    document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
   }
 }
 
 function showCategory(category) {
   const categoryMessage = document.getElementById('categoryMessage');
   const backBtn = document.getElementById('backToCategoriesBtn');
-  if (categoryMessage) categoryMessage.style.display = 'none';
+  
+  categoryMessage.style.display = 'none';
   if (backBtn) backBtn.style.display = 'none';
+  
   document.querySelectorAll('.category-section').forEach(section => {
     if (section.dataset.category === category) {
       section.classList.remove('hidden');
@@ -515,6 +547,7 @@ function decreaseInvoiceQuantity(inputId) {
     invoiceInput.value = parseInt(invoiceInput.value) - 1;
     mainInput.value = invoiceInput.value;
     updateInvoiceTotals();
+    updateCart();
   }
 }
 
@@ -531,6 +564,8 @@ function updateCart() {
   });
   document.getElementById('cartTotalQuantity').textContent = totalQuantity;
   document.getElementById('cartTotal').textContent = total.toLocaleString();
+  
+  // Show or hide cart section based on total quantity
   const cartSection = document.getElementById('cartSection');
   if (totalQuantity > 0) {
     cartSection.style.display = 'flex';
@@ -543,7 +578,9 @@ function showInvoice() {
   const agentSelect = document.getElementById('agentSelect');
   if (!agentSelect || !agentSelect.value) {
     alert(GetLabel('agent_alert_msg'));
-    if (document.getElementById('agentCode')) document.getElementById('agentCode').focus();
+    if (document.getElementById('agentCode')) {
+      document.getElementById('agentCode').focus();
+    }
     return;
   }
 
@@ -631,10 +668,12 @@ function updateInvoiceTotals() {
     const mainInput = document.getElementById('qty_' + inputId);
     const price = parseFloat(mainInput.dataset.price) || 0;
     const itemTotal = qty * price;
+    
     const itemTotalElement = input.closest('.invoice-item-controls').querySelector('.invoice-item-total strong');
     if (itemTotalElement) {
       itemTotalElement.textContent = itemTotal.toLocaleString() + ' دینار';
     }
+    
     if (qty > 0) {
       totalPrice += itemTotal;
       totalQty += qty;
@@ -746,11 +785,15 @@ function sendToWhatsApp() {
   window.open(whatsappURL, '_blank');
 }
 
+// Show back button when scrolling down
 window.addEventListener('scroll', function() {
   const backBtn = document.getElementById('backToCategoriesBtn');
+  
+  // Show button only when a category is selected and user has scrolled down
   const isCategorySelected = Array.from(document.querySelectorAll('.category-section')).some(section => {
     return !section.classList.contains('hidden');
   });
+  
   if (isCategorySelected && window.scrollY > 300) {
     backBtn.style.display = 'flex';
   } else {
@@ -758,11 +801,12 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// Scroll back to categories when button is clicked
 function scrollToCategories() {
   const categoryButtons = document.getElementById('categoryButtons');
   if (categoryButtons) {
     categoryButtons.scrollIntoView({
-      behavior: 'smooth',
+      categoryButtons: 'smooth',
       block: 'start'
     });
   }
