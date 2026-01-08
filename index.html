@@ -634,9 +634,9 @@ function showInvoice() {
       <div class='invoice-item-controls'>
         <div class='invoice-quantity-section'>
           <div class='invoice-quantity-controls'>
-            <button type='button' class='invoice-qty-btn minus' onclick='decreaseInvoiceQuantity("${product.inputId}")'>-</button>
-            <input type='number' class='invoice-quantity' id='invoice_qty_${product.inputId}' value='${product.qty}' min='0' onchange='updateInvoiceQuantity(this, "${product.inputId}")'>
             <button type='button' class='invoice-qty-btn plus' onclick='increaseInvoiceQuantity("${product.inputId}")'>+</button>
+            <input type='number' class='invoice-quantity' id='invoice_qty_${product.inputId}' value='${product.qty}' min='0' onchange='updateInvoiceQuantity(this, "${product.inputId}")'>
+            <button type='button' class='invoice-qty-btn minus' onclick='decreaseInvoiceQuantity("${product.inputId}")'>-</button>
           </div>
         </div>
         <div class='invoice-item-total'>
