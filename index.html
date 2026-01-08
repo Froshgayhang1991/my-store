@@ -322,23 +322,6 @@ window.labels = {
 </div>
 
 <script>
-// FORCE HIDE agent details on page load - MOBILE FIX
-document.addEventListener('DOMContentLoaded', function() {
-  const agentDetails = document.getElementById('agentDetails');
-  if (agentDetails) {
-    agentDetails.style.display = 'none';
-    console.log('Agent details HIDDEN on page load');
-  }
-  
-  // Also hide on window load (extra safety)
-  window.addEventListener('load', function() {
-    if (agentDetails) {
-      agentDetails.style.display = 'none';
-      console.log('Agent details HIDDEN on window load');
-    }
-  });
-});
-
 function GetLabel(key) {
   if (window.labels && window.labels[key]) {
     return window.labels[key];
@@ -535,13 +518,13 @@ function showCategory(category) {
 }
 
 function increaseQuantity(btn) {
-  const input = btn.previousElementSibling;
+  const input = btn.nextElementSibling;
   input.value = parseInt(input.value) + 1;
   updateCart();
 }
 
 function decreaseQuantity(btn) {
-  const input = btn.nextElementSibling;
+  const input = btn.previousElementSibling;
   if (parseInt(input.value) > 0) {
     input.value = parseInt(input.value) - 1;
     updateCart();
@@ -651,9 +634,9 @@ function showInvoice() {
       <div class='invoice-item-controls'>
         <div class='invoice-quantity-section'>
           <div class='invoice-quantity-controls'>
-            <button type='button' class='invoice-qty-btn plus' onclick='increaseInvoiceQuantity("${product.inputId}")'>+</button>
-            <input type='number' class='invoice-quantity' id='invoice_qty_${product.inputId}' value='${product.qty}' min='0' onchange='updateInvoiceQuantity(this, "${product.inputId}")'>
             <button type='button' class='invoice-qty-btn minus' onclick='decreaseInvoiceQuantity("${product.inputId}")'>-</button>
+            <input type='number' class='invoice-quantity' id='invoice_qty_${product.inputId}' value='${product.qty}' min='0' onchange='updateInvoiceQuantity(this, "${product.inputId}")'>
+            <button type='button' class='invoice-qty-btn plus' onclick='increaseInvoiceQuantity("${product.inputId}")'>+</button>
           </div>
         </div>
         <div class='invoice-item-total'>
@@ -823,7 +806,7 @@ function scrollToCategories() {
   const categoryButtons = document.getElementById('categoryButtons');
   if (categoryButtons) {
     categoryButtons.scrollIntoView({
-      behavior: 'smooth',
+      categoryButtons: 'smooth',
       block: 'start'
     });
   }
