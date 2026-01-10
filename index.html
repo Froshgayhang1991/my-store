@@ -240,7 +240,6 @@ function GetLabel(key) {
 }
 
 window.cartState = {};
-
 function updateCartState(productId, qty, price, name, code, image) {
   if (qty > 0) {
     window.cartState[productId] = { qty: qty, price: price, name: name, code: code, image: image };
@@ -252,88 +251,85 @@ function updateCartState(productId, qty, price, name, code, image) {
 
 function showCategory(event, categoryName) {
   if (event) { event.preventDefault(); event.stopPropagation(); }
-  const container = document.getElementById('productsContainer');
-  const template = document.getElementById('cat-' + categoryName);
-  const msg = document.getElementById('categoryMessage');
+  var container = document.getElementById('productsContainer');
+  var template = document.getElementById('cat-' + categoryName);
+  var msg = document.getElementById('categoryMessage');
   if (msg) msg.style.display = 'none';
   container.innerHTML = '';
   if (template) {
-    const clone = template.content.cloneNode(true);
+    var clone = template.content.cloneNode(true);
     container.appendChild(clone);
     restoreProductInputs();
   }
-  setTimeout(() => {
-    window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
+  setTimeout(function() {
+    if(container.offsetTop) window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
   }, 100);
   return false;
 }
 
 function restoreProductInputs() {
-  document.querySelectorAll('.quantity').forEach(input => {
-    const id = input.id.replace('qty-', '');
+  var inputs = document.querySelectorAll('.quantity');
+  inputs.forEach(function(input) {
+    var id = input.id.replace('qty-', '');
     if (window.cartState[id]) {
       input.value = window.cartState[id].qty;
     }
   });
 }
 
-function scrollToCategories() {
-  const btnContainer = document.getElementById('categoryButtons');
-  if (btnContainer) btnContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
 function increaseQuantity(event, btn) {
   if(event) event.stopPropagation();
-  const input = btn.nextElementSibling;
-  const val = parseInt(input.value) + 1;
+  var input = btn.nextElementSibling;
+  var val = parseInt(input.value) + 1;
   input.value = val;
-  const id = input.id.replace('qty-', '');
+  var id = input.id.replace('qty-', '');
   updateCartState(id, val, parseFloat(input.dataset.price), input.dataset.name, input.dataset.code, input.dataset.image);
 }
 
 function decreaseQuantity(event, btn) {
   if(event) event.stopPropagation();
-  const input = btn.previousElementSibling;
-  let val = parseInt(input.value);
+  var input = btn.previousElementSibling;
+  var val = parseInt(input.value);
   if (val > 0) {
     val = val - 1;
     input.value = val;
-    const id = input.id.replace('qty-', '');
+    var id = input.id.replace('qty-', '');
     updateCartState(id, val, parseFloat(input.dataset.price), input.dataset.name, input.dataset.code, input.dataset.image);
   }
 }
 
 function updateCartDisplay() {
-  let total = 0, totalQty = 0;
-  for (const id in window.cartState) {
-    const item = window.cartState[id];
+  var total = 0, totalQty = 0;
+  for (var id in window.cartState) {
+    var item = window.cartState[id];
     total += item.qty * item.price;
     totalQty += item.qty;
   }
   document.getElementById('cartTotalQuantity').textContent = totalQty;
   document.getElementById('cartTotal').textContent = total.toLocaleString();
-  const cartSection = document.getElementById('cartSection');
+  var cartSection = document.getElementById('cartSection');
   cartSection.style.display = totalQty > 0 ? 'flex' : 'none';
 }
 
 function validateAndFindAgent(input) {
-  let code = input.value;
-  // Keep only numbers
-  code = code.replace(/[^0-9]/g, '');
+  var raw = input.value;
+  var code = '';
+  for (var i = 0; i < raw.length; i++) {
+    if (raw[i] >= '0' && raw[i] <= '9') code += raw[i];
+  }
   input.value = code;
-  console.log('Code entered: ' + code);
   if (code.length === 4) {
-    const select = document.getElementById('agentSelect');
-    const options = select.options;
-    let found = false;
-    for (let i = 0; i < options.length; i++) {
+    var select = document.getElementById('agentSelect');
+    var options = select.options;
+    var found = false;
+    for (var i = 0; i < options.length; i++) {
       if (options[i].dataset.lastfour === code) {
         showAgentConfirmation({ value: options[i].value, text: options[i].text, mobile: options[i].dataset.mobile, address: options[i].dataset.address });
         found = true;
         break;
       }
     }
-    const errorDiv = document.getElementById('codeError');
+    var errorDiv = document.getElementById('codeError');
     if (!found) {
       errorDiv.style.display = 'block';
       errorDiv.textContent = GetLabel('agentnotfound');
@@ -349,14 +345,14 @@ function showAgentConfirmation(agent) {
   document.getElementById('confirmAgentName').textContent = agent.text;
   document.getElementById('confirmAgentMobile').textContent = agent.mobile;
   document.getElementById('confirmAgentAddress').textContent = agent.address;
-  const details = document.getElementById('agentDetails');
+  var details = document.getElementById('agentDetails');
   details.setAttribute('data-agent-value', agent.value);
   details.style.display = 'block';
 }
 
 function confirmAgentSelection() {
-  const details = document.getElementById('agentDetails');
-  const val = details.getAttribute('data-agent-value');
+  var details = document.getElementById('agentDetails');
+  var val = details.getAttribute('data-agent-value');
   if (val) {
     document.getElementById('agentSelect').value = val;
     details.style.display = 'none';
@@ -378,29 +374,23 @@ function handleInputFocus() {
 
 function showInvoice() {
   if (Object.keys(window.cartState).length === 0) { alert(GetLabel('cartalertmsg')); return; }
-  const modal = document.getElementById('invoiceModal');
-  const itemsDiv = document.getElementById('invoiceItems');
+  var modal = document.getElementById('invoiceModal');
+  var itemsDiv = document.getElementById('invoiceItems');
   itemsDiv.innerHTML = '';
-  let total = 0, totalQty = 0;
-  const select = document.getElementById('agentSelect');
-  const opt = select.options[select.selectedIndex];
+  var total = 0, totalQty = 0;
+  var select = document.getElementById('agentSelect');
+  var opt = select.options[select.selectedIndex];
   document.getElementById('invoiceAgentName').textContent = opt.dataset.name;
   document.getElementById('invoiceAgentMobile').textContent = opt.dataset.mobile;
   document.getElementById('invoiceAgentAddress').textContent = opt.dataset.address;
-  for (const id in window.cartState) {
-    const item = window.cartState[id];
-    const itemTotal = item.qty * item.price;
+  for (var id in window.cartState) {
+    var item = window.cartState[id];
+    var itemTotal = item.qty * item.price;
     total += itemTotal; totalQty += item.qty;
-    const div = document.createElement('div');
+    var div = document.createElement('div');
     div.className = 'invoice-item';
-    div.innerHTML = ` 
-      <div class='invoice-item-info'>
-        <strong>${item.name}</strong><br>
-        <small>${GetLabel('codelabel')} ${item.code}</small>
-      </div>
-      <div class='invoice-item-total'>
-        ${item.qty} x ${item.price.toLocaleString()} = <strong>${itemTotal.toLocaleString()}</strong>
-      </div>`;
+    div.innerHTML = '<div class="invoice-item-info"><strong>' + item.name + '</strong><br><small>' + GetLabel('codelabel') + ' ' + item.code + '</small></div>' +
+      '<div class="invoice-item-total">' + item.qty + ' x ' + item.price.toLocaleString() + ' = <strong>' + itemTotal.toLocaleString() + '</strong></div>';
     itemsDiv.appendChild(div);
   }
   document.getElementById('invoiceTotalQty').textContent = totalQty;
@@ -412,10 +402,10 @@ function closeInvoice() { document.getElementById('invoiceModal').style.display 
 
 function sendToWhatsApp() {
   if (!confirm(GetLabel('confirmsendorder'))) return;
-  const select = document.getElementById('agentSelect');
-  const opt = select.options[select.selectedIndex];
-  const now = new Date();
-  let msg = GetLabel('neworder') + '%0A-----------------------%0A';
+  var select = document.getElementById('agentSelect');
+  var opt = select.options[select.selectedIndex];
+  var now = new Date();
+  var msg = GetLabel('neworder') + '%0A-----------------------%0A';
   msg += '?? ' + now.toLocaleDateString('en-GB') + ' ' + now.toLocaleTimeString('en-US') + '%0A%0A';
   msg += '?? ' + GetLabel('agentinfo') + '%0A';
   msg += GetLabel('namelabel') + ' ' + opt.dataset.name + '%0A';
@@ -423,10 +413,10 @@ function sendToWhatsApp() {
   msg += GetLabel('addresslabel') + ' ' + opt.dataset.address + '%0A';
   msg += '--------------------------%0A%0A';
   msg += '?? ' + GetLabel('productlist') + '%0A-----------------------%0A%0A';
-  let i = 1, total = 0, totalQty = 0;
-  for (const id in window.cartState) {
-    const item = window.cartState[id];
-    const itemTotal = item.qty * item.price;
+  var i = 1, total = 0, totalQty = 0;
+  for (var id in window.cartState) {
+    var item = window.cartState[id];
+    var itemTotal = item.qty * item.price;
     total += itemTotal; totalQty += item.qty;
     msg += i + '. ' + item.name + '%0A';
     msg += GetLabel('codelabel') + ' ' + item.code + '%0A';
@@ -438,13 +428,13 @@ function sendToWhatsApp() {
   }
   msg += '%0A?? ' + GetLabel('totalquantity') + ': ' + totalQty + '%0A';
   msg += '?? ' + GetLabel('totalprice') + ': ' + total.toLocaleString() + '%0A';
-  const phone = '9647501061451';
+  var phone = '9647501061451';
   window.open('https://wa.me/' + phone + '?text=' + msg, '_blank');
   closeInvoice();
 }
 
 window.onscroll = function() {
-  const btn = document.getElementById('backToCategoriesBtn');
+  var btn = document.getElementById('backToCategoriesBtn');
   if (window.scrollY > 300) btn.style.display = 'flex';
   else btn.style.display = 'none';
 };
