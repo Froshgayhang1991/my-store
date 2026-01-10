@@ -313,54 +313,30 @@ function GetLabel(key) {
   if (window.labels && window.labels[key]) {
     return window.labels[key];
   }
-  return key; // fallback to the key
+  return key;
 }
 
 function handleInputFocus() {
   const agentDetails = document.getElementById('agentDetails');
   const errorDiv = document.getElementById('codeError');
-  const categoryButtons = document.getElementById('categoryButtons');
-  const categoryMessage = document.getElementById('categoryMessage');
-  const cartSection = document.getElementById('cartSection');
-  const backBtn = document.getElementById('backToCategoriesBtn');
-  
   agentDetails.style.display = 'none';
   errorDiv.style.display = 'none';
-  categoryButtons.style.display = 'none';
-  categoryMessage.style.display = 'none';
-  cartSection.style.display = 'none';
-  if (backBtn) backBtn.style.display = 'none';
-  document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
-  document.getElementById('agentSelect').value = '';
 }
 
 function validateAndFindAgent(input) {
-  const code = input.value.replace(/\D/g, ''); // Remove non-digits
+  const code = input.value.replace(/\D/g, '');
   const errorDiv = document.getElementById('codeError');
   const agentDetails = document.getElementById('agentDetails');
   const agentSelect = document.getElementById('agentSelect');
-  const categoryButtons = document.getElementById('categoryButtons');
-  const categoryMessage = document.getElementById('categoryMessage');
-  const cartSection = document.getElementById('cartSection');
-  const backBtn = document.getElementById('backToCategoriesBtn');
   
   agentDetails.style.display = 'none';
   errorDiv.style.display = 'none';
-  
-  // Update input with cleaned value
   input.value = code;
   
   if (code.length < 4) {
-    categoryButtons.style.display = 'none';
-    categoryMessage.style.display = 'none';
-    cartSection.style.display = 'none';
-    if (backBtn) backBtn.style.display = 'none';
-    document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
-    agentSelect.value = '';
-    
     if (code.length > 0) {
-       errorDiv.textContent = GetLabel('code_too_short');
-       errorDiv.style.display = 'block';
+      errorDiv.textContent = GetLabel('code_too_short');
+      errorDiv.style.display = 'block';
     }
     return;
   }
@@ -384,7 +360,6 @@ function validateAndFindAgent(input) {
   if (matchingAgents.length === 0) {
     errorDiv.textContent = GetLabel('agent_not_found');
     errorDiv.style.display = 'block';
-    agentDetails.style.display = 'none';
   } else {
     errorDiv.style.display = 'none';
     showAgentConfirmation(matchingAgents[0]);
@@ -393,16 +368,10 @@ function validateAndFindAgent(input) {
 
 function showAgentConfirmation(agent) {
   const agentDetails = document.getElementById('agentDetails');
-  
-  // Fill confirmation details
   document.getElementById('confirmAgentName').textContent = agent.text;
   document.getElementById('confirmAgentMobile').textContent = agent.mobile;
   document.getElementById('confirmAgentAddress').textContent = agent.address;
-  
-  // Store the agent value in a data attribute for confirmation
   agentDetails.setAttribute('data-agent-value', agent.value);
-  
-  // Show confirmation section
   agentDetails.style.display = 'block';
 }
 
@@ -411,26 +380,15 @@ function confirmAgentSelection() {
   const agentSelect = document.getElementById('agentSelect');
   const categoryButtons = document.getElementById('categoryButtons');
   const categoryMessage = document.getElementById('categoryMessage');
-  const cartSection = document.getElementById('cartSection');
   const errorDiv = document.getElementById('codeError');
-  const backBtn = document.getElementById('backToCategoriesBtn');
-  
   const agentValue = agentDetails.getAttribute('data-agent-value');
   
   if (agentValue) {
     agentSelect.value = agentValue;
-    
-    // Hide error and confirmation
     errorDiv.style.display = 'none';
     agentDetails.style.display = 'none';
-    
-    // Show other sections BUT NOT CART SECTION
     categoryMessage.style.display = 'block';
     categoryButtons.style.display = 'block';
-    cartSection.style.display = 'none'; // DO NOT SHOW CART SECTION
-    if (backBtn) backBtn.style.display = 'none';
-    
-    // Update invoice with agent info
     updateAgentInfo();
   }
 }
@@ -440,59 +398,41 @@ function cancelAgentSelection() {
   const agentSelect = document.getElementById('agentSelect');
   const input = document.getElementById('agentCode');
   const errorDiv = document.getElementById('codeError');
-  const backBtn = document.getElementById('backToCategoriesBtn');
-  const cartSection = document.getElementById('cartSection');
-  
-  // Clear everything
   agentDetails.style.display = 'none';
   agentSelect.value = '';
   input.value = '';
   errorDiv.style.display = 'none';
-  if (backBtn) backBtn.style.display = 'none';
-  
-  // Hide cart section
-  cartSection.style.display = 'none';
-  
-  // Hide other sections
   document.getElementById('categoryButtons').style.display = 'none';
   document.getElementById('categoryMessage').style.display = 'none';
   document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
-  
-  // Focus back on code input
   input.focus();
 }
 
 function updateAgentInfo() {
   const select = document.getElementById('agentSelect');
-  const details = document.getElementById('agentDetails');
   const categoryButtons = document.getElementById('categoryButtons');
   const categoryMessage = document.getElementById('categoryMessage');
-  const cartSection = document.getElementById('cartSection');
   
   if (select.value) {
-    const option = select.options[select.selectedIndex];
-    document.getElementById('agentMobile').textContent = option.dataset.mobile;
-    document.getElementById('agentAddress').textContent = option.dataset.address;
-    details.style.display = 'block';
     categoryMessage.style.display = 'block';
     categoryButtons.style.display = 'block';
-    // DO NOT show cart section here
-    cartSection.style.display = 'none';
   } else {
-    details.style.display = 'none';
     categoryMessage.style.display = 'none';
     categoryButtons.style.display = 'none';
-    cartSection.style.display = 'none';
     document.querySelectorAll('.category-section').forEach(s => s.classList.add('hidden'));
   }
 }
 
 function showCategory(category) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  
   const categoryMessage = document.getElementById('categoryMessage');
   const backBtn = document.getElementById('backToCategoriesBtn');
   
   categoryMessage.style.display = 'none';
-  if (backBtn) backBtn.style.display = 'none';
   
   document.querySelectorAll('.category-section').forEach(section => {
     if (section.dataset.category === category) {
@@ -501,16 +441,26 @@ function showCategory(category) {
       section.classList.add('hidden');
     }
   });
-  window.scrollTo({ top: document.getElementById('productsContainer').offsetTop - 20, behavior: 'smooth' });
+  
+  setTimeout(() => {
+    const productsContainer = document.getElementById('productsContainer');
+    if (productsContainer) {
+      window.scrollTo({ top: productsContainer.offsetTop - 20, behavior: 'smooth' });
+    }
+  }, 100);
+  
+  return false;
 }
 
 function increaseQuantity(btn) {
+  if (event) event.stopPropagation();
   const input = btn.nextElementSibling;
   input.value = parseInt(input.value) + 1;
   updateCart();
 }
 
 function decreaseQuantity(btn) {
+  if (event) event.stopPropagation();
   const input = btn.previousElementSibling;
   if (parseInt(input.value) > 0) {
     input.value = parseInt(input.value) - 1;
@@ -519,6 +469,7 @@ function decreaseQuantity(btn) {
 }
 
 function increaseInvoiceQuantity(inputId) {
+  if (event) event.stopPropagation();
   const invoiceInput = document.getElementById('invoice_qty_' + inputId);
   const mainInput = document.getElementById('qty_' + inputId);
   invoiceInput.value = parseInt(invoiceInput.value) + 1;
@@ -528,6 +479,7 @@ function increaseInvoiceQuantity(inputId) {
 }
 
 function decreaseInvoiceQuantity(inputId) {
+  if (event) event.stopPropagation();
   const invoiceInput = document.getElementById('invoice_qty_' + inputId);
   const mainInput = document.getElementById('qty_' + inputId);
   if (parseInt(invoiceInput.value) > 0) {
@@ -552,7 +504,6 @@ function updateCart() {
   document.getElementById('cartTotalQuantity').textContent = totalQuantity;
   document.getElementById('cartTotal').textContent = total.toLocaleString();
   
-  // Show or hide cart section based on total quantity
   const cartSection = document.getElementById('cartSection');
   if (totalQuantity > 0) {
     cartSection.style.display = 'flex';
@@ -570,11 +521,11 @@ function showInvoice() {
     }
     return;
   }
-
+  
   const products = [];
   let totalPrice = 0;
   let totalQty = 0;
-
+  
   document.querySelectorAll('.quantity').forEach(input => {
     const qty = parseInt(input.value) || 0;
     if (qty > 0) {
@@ -591,22 +542,22 @@ function showInvoice() {
       totalQty += qty;
     }
   });
-
+  
   if (products.length === 0) {
     alert(GetLabel('cart_alert_msg'));
     return;
   }
-
+  
   const now = new Date();
   const date = now.toLocaleDateString('en-GB');
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   document.getElementById('invoiceDateTime').textContent = date + ' - ' + time;
-
+  
   const selectedOption = agentSelect.options[agentSelect.selectedIndex];
   document.getElementById('invoiceAgentName').textContent = selectedOption.dataset.name;
   document.getElementById('invoiceAgentMobile').textContent = selectedOption.dataset.mobile;
   document.getElementById('invoiceAgentAddress').textContent = selectedOption.dataset.address;
-
+  
   const invoiceItems = document.getElementById('invoiceItems');
   invoiceItems.innerHTML = '';
   products.forEach((product, index) => {
@@ -615,8 +566,8 @@ function showInvoice() {
     itemDiv.innerHTML = `
       <div class='invoice-item-info'>
         <strong>${product.name}</strong><br>
-        <small>کۆد: ${product.code}</small><br>
-        <small>نرخ: ${product.price.toLocaleString()} دینار</small>
+        <small>${GetLabel('code_label')}: ${product.code}</small><br>
+        <small>${GetLabel('price_label')}: ${product.price.toLocaleString()} ${GetLabel('dinar')}</small>
       </div>
       <div class='invoice-item-controls'>
         <div class='invoice-quantity-section'>
@@ -627,15 +578,14 @@ function showInvoice() {
           </div>
         </div>
         <div class='invoice-item-total'>
-          <strong>${product.total.toLocaleString()} دینار</strong>
+          <strong>${product.total.toLocaleString()} ${GetLabel('dinar')}</strong>
         </div>
       </div>
     `;
     invoiceItems.appendChild(itemDiv);
   });
-
+  
   updateInvoiceTotals();
-
   document.getElementById('invoiceModal').style.display = 'flex';
 }
 
@@ -658,7 +608,7 @@ function updateInvoiceTotals() {
     
     const itemTotalElement = input.closest('.invoice-item-controls').querySelector('.invoice-item-total strong');
     if (itemTotalElement) {
-      itemTotalElement.textContent = itemTotal.toLocaleString() + ' دینار';
+      itemTotalElement.textContent = itemTotal.toLocaleString() + ' ' + GetLabel('dinar');
     }
     
     if (qty > 0) {
@@ -683,27 +633,27 @@ window.onclick = function(event) {
 
 function sendToWhatsApp() {
   closeInvoice();
-
+  
   const products = [];
   let totalPrice = 0;
   let totalQty = 0;
-
+  
   document.querySelectorAll('.quantity').forEach(input => {
     const qty = parseInt(input.value) || 0;
     if (qty > 0) {
       const price = parseFloat(input.dataset.price) || 0;
-      const imagePath = input.dataset.image || '';
+      const imagePath = input.dataset.image;
       let fullImageUrl = '';
-
+      
       if (imagePath) {
         if (window.PUBLIC_IMAGE_BASE_URL) {
-          fullImageUrl = window.PUBLIC_IMAGE_BASE_URL + imagePath;
+          fullImageUrl = window.PUBLIC_IMAGE_BASE_URL + '/' + imagePath;
         } else if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
           const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
           fullImageUrl = baseUrl + '/' + imagePath;
         }
       }
-
+      
       products.push({
         name: input.dataset.name,
         code: input.dataset.code,
@@ -716,67 +666,64 @@ function sendToWhatsApp() {
       totalQty += qty;
     }
   });
-
+  
   if (products.length === 0) {
     alert(GetLabel('cart_alert_msg'));
     return;
   }
-
+  
   const confirmSend = confirm(GetLabel('confirm_send_order'));
-  if (!confirmSend) { return; }
-
+  if (!confirmSend) return;
+  
   const agentSelect = document.getElementById('agentSelect');
   const selectedOption = agentSelect.options[agentSelect.selectedIndex];
   const agentName = selectedOption.dataset.name;
   const agentMobile = selectedOption.dataset.mobile;
   const agentAddress = selectedOption.dataset.address;
-
+  
   const now = new Date();
   const date = now.toLocaleDateString('en-GB');
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
-
-  let message = '  *' + GetLabel('new_order') + '* %0A';
-  message += '=========================%0A';
-  message += ' ' + date + '       ' + time + '%0A';
-  message += '=========================%0A%0A';
-  message += ' *' + GetLabel('agent_info') + '* %0A';
-  message += '-------------------------%0A';
-  message += ' ' + GetLabel('name_label') + ': ' + agentName + '%0A';
-  message += ' ' + GetLabel('mobile_label') + ': ' + agentMobile + '%0A';
-  message += ' ' + GetLabel('address_label') + ': ' + agentAddress + '%0A';
-  message += '-------------------------%0A%0A';
-  message += ' *' + GetLabel('product_list') + '* %0A';
-  message += '=========================%0A%0A';
-
+  
+  let message = GetLabel('new_order') + '%0A';
+  message += '-----------------------%0A';
+  message += '?? ' + date + ' - ' + time + '%0A';
+  message += '%0A%0A';
+  message += '?? ' + GetLabel('agent_info') + '%0A';
+  message += '--------------------------%0A';
+  message += GetLabel('name_label') + ': ' + agentName + '%0A';
+  message += GetLabel('mobile_label') + ': ' + agentMobile + '%0A';
+  message += GetLabel('address_label') + ': ' + agentAddress + '%0A';
+  message += '--------------------------%0A%0A';
+  message += '?? ' + GetLabel('product_list') + '%0A';
+  message += '-----------------------%0A%0A';
+  
   products.forEach((product, index) => {
-    message += '-------------------------%0A';
-    message += '*' + (index + 1) + '. ' + product.name + '*%0A';
-    message += '    ' + GetLabel('code_label') + ': `' + product.code + '`%0A';
-    message += '    ' + GetLabel('quantity_label') + ': *' + product.qty + '*%0A';
-    message += '    ' + GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' دینار%0A';
-    message += '    ' + GetLabel('total_label') + ': *' + product.total.toLocaleString() + ' دینار*%0A';
+    message += '--------------------------%0A';
+    message += (index + 1) + '. ' + product.name + '%0A';
+    message += GetLabel('code_label') + ': ' + product.code + '%0A';
+    message += GetLabel('quantity_label') + ': ' + product.qty + '%0A';
+    message += GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
+    message += GetLabel('total_label') + ': ' + product.total.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
     if (product.imageUrl) {
-      message += '   ?? ' + product.imageUrl + '%0A';
+      message += '??? ' + product.imageUrl + '%0A';
     }
     message += '%0A';
   });
-
-  message += '=========================%0A';
-  message += ' *' + GetLabel('total_quantity') + ': ' + totalQty + '* %0A';
-  message += ' *' + GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' دینار* %0A';
-  message += '=========================%0A%0A';
-  message += ' _' + 'Thank you for your order!' + '_ ';
-
+  
+  message += '-----------------------%0A';
+  message += '?? ' + GetLabel('total_quantity') + ': ' + totalQty + '%0A';
+  message += '?? ' + GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
+  message += '-----------------------%0A%0A';
+  message += '? Thank you for your order!';
+  
   const phoneNumber = '9647501061451';
   const whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
   window.open(whatsappURL, '_blank');
 }
 
-// Show back button when scrolling down
 window.addEventListener('scroll', function() {
   const backBtn = document.getElementById('backToCategoriesBtn');
-  
-  // Show button only when a category is selected and user has scrolled down
   const isCategorySelected = Array.from(document.querySelectorAll('.category-section')).some(section => {
     return !section.classList.contains('hidden');
   });
@@ -788,16 +735,16 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Scroll back to categories when button is clicked
 function scrollToCategories() {
   const categoryButtons = document.getElementById('categoryButtons');
   if (categoryButtons) {
     categoryButtons.scrollIntoView({
-      categoryButtons: 'smooth',
+      behavior: 'smooth',
       block: 'start'
     });
   }
 }
+
 </script>
 </body>
 </html>
