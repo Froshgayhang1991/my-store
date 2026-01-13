@@ -387,7 +387,7 @@ function increaseQuantity(event, btn) {
   updateCart();
 }
 
-function decreaseQuantity(btn) {
+function decreaseQuantity(event, btn) {
   if (event) event.stopPropagation();
   const input = btn.previousElementSibling;
   if (parseInt(input.value) > 0) {
@@ -560,15 +560,18 @@ window.onclick = function(event) {
 }
 
 function sendToWhatsApp() {
-  closeInvoice();
+  // Close invoice modal
+  if (document.getElementById('invoiceModal')) {
+    document.getElementById('invoiceModal').style.display = 'none';
+  }
   
+  // Collect products with quantity > 0
   const products = [];
   let totalPrice = 0;
   let totalQty = 0;
   
   document.querySelectorAll('.quantity').forEach(input => {
-    const qty = parseInt(input.value) || 0;
-    if (qty > 0) {
+    const qty = parseInt(input.value) || 0;    if (qty > 0) {
       const price = parseFloat(input.dataset.price) || 0;
       
       products.push({
@@ -583,30 +586,38 @@ function sendToWhatsApp() {
     }
   });
   
+  // Check if any products selected
   if (products.length === 0) {
-    alert(GetLabel('cart_alert_msg'));
+    alert('Please select at least one product');
     return;
   }
   
-  const confirmSend = confirm(GetLabel('confirm_send_order'));
-  if (!confirmSend) return;
-  
+  // Check if agent selected
   const agentSelect = document.getElementById('agentSelect');
+  if (!agentSelect || !agentSelect.value) {
+    alert('Please select an agent first');
+    document.getElementById('agentCode').focus();
+    return;
+  }
+  
+  // Get agent details
   const selectedOption = agentSelect.options[agentSelect.selectedIndex];
   const agentName = selectedOption.dataset.name;
   const agentMobile = selectedOption.dataset.mobile;
   const agentAddress = selectedOption.dataset.address;
   
+  // Ask for confirmation
+  const confirmSend = confirm('????? ???????? ' + products.length + ' ???? ?? ???????');
+  if (!confirmSend) return;
+  
+  // Get date and time
   const now = new Date();
   const date = now.toLocaleDateString('en-GB');
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   
-  // KURDISH FORMAT USING LABELS
-  let message = '';
-  
-  // ALL PRODUCTS START FROM THE BEGINNING
-  message += GetLabel('new_order') + '%0A';
-  message += ' ' + date + ' - ' + time + '%0A';
+  // Build message - SIMPLE KURDISH FORMAT
+  let message = GetLabel('new_order') + '%0A';
+  message += date + ' - ' + time + '%0A';
   message += '%0A';
   
   message += GetLabel('agent_info') + '%0A';
@@ -616,33 +627,41 @@ function sendToWhatsApp() {
   message += '%0A';
   
   message += GetLabel('product_list') + '%0A';
-  message += '______________' + '%0A';
   
-  // PRODUCT FORMAT: Number. Product name and code in ONE LINE
-  // Then Quantity, Price, Total in ONE LINE
+  // Add products
   products.forEach((product, index) => {
-    // Line 1: Number. Product name - Code
     message += (index + 1) + '. ' + product.name + ' - ' + GetLabel('code_label') + ': ' + product.code + '%0A';
-    
-    // Line 2: Quantity, Price, Total (all in one line)
-    message += '   ' + GetLabel('quantity_label') + ': ' + product.qty + ' - ' + 
-                GetLabel('price_label') + ': ' + product.price.toLocaleString()  + ' - ' + 
-                GetLabel('total_label') + ': ' + product.total.toLocaleString()  + '%0A';
-    
-    // LINE BETWEEN PRODUCTS - NO GAP
-    if (index < products.length - 1) {
-      message += '_________________________' + '%0A';
-    }
+    message += '   ' + GetLabel('quantity_label') + ': ' + product.qty + ' - ' +
+                GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' - ' +
+                GetLabel('total_label') + ': ' + product.total.toLocaleString() + '%0A';
   });
   
-  message += '-------------------------------------%0A';
+  // Add totals
+  message += '%0A';
   message += GetLabel('total_quantity') + ': ' + totalQty + '%0A';
   message += GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
-  message += '-------------------------------------%0A%0A';  message += GetLabel('thanks') + '%0A';
+  message += '%0A';
+  message += GetLabel('thanks') + '%0A';
   
+  // Send to WhatsApp
   const phoneNumber = '9647501061451';
   const whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
-  window.open(whatsappURL, '_blank');
+  
+  // Method 1: Try window.open first
+  const newWindow = window.open(whatsappURL, '_blank');
+  
+  // Method 2: If blocked, create and click a link
+  setTimeout(() => {
+    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+      const link = document.createElement('a');
+      link.href = whatsappURL;
+      link.target = '_blank';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }, 100);
 }
 
 window.addEventListener('scroll', function() {
