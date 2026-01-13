@@ -569,25 +569,13 @@ function sendToWhatsApp() {
     const qty = parseInt(input.value) || 0;
     if (qty > 0) {
       const price = parseFloat(input.dataset.price) || 0;
-      const imagePath = input.dataset.image;
-      let fullImageUrl = '';
-      
-      if (imagePath) {
-        if (window.PUBLIC_IMAGE_BASE_URL) {
-          fullImageUrl = window.PUBLIC_IMAGE_BASE_URL + '/' + imagePath;
-        } else if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
-          const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-          fullImageUrl = baseUrl + '/' + imagePath;
-        }
-      }
       
       products.push({
         name: input.dataset.name,
         code: input.dataset.code,
         price: price,
         qty: qty,
-        total: qty * price,
-        imageUrl: fullImageUrl
+        total: qty * price
       });
       totalPrice += qty * price;
       totalQty += qty;
@@ -612,37 +600,36 @@ function sendToWhatsApp() {
   const date = now.toLocaleDateString('en-GB');
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   
+  // KURDISH FORMAT USING LABELS
   let message = GetLabel('new_order') + '%0A';
-  message += '-----------------------%0A';
-  message += '?? ' + date + ' - ' + time + '%0A';
-  message += '%0A%0A';
-  message += '?? ' + GetLabel('agent_info') + '%0A';
-  message += '--------------------------%0A';
+  message += ' ' + date + ' - ' + time + '%0A';
+  message += '%0A';
+  
+  message += GetLabel('agent_info') + '%0A';
   message += GetLabel('name_label') + ': ' + agentName + '%0A';
   message += GetLabel('mobile_label') + ': ' + agentMobile + '%0A';
   message += GetLabel('address_label') + ': ' + agentAddress + '%0A';
-  message += '--------------------------%0A%0A';
-  message += '?? ' + GetLabel('product_list') + '%0A';
-  message += '-----------------------%0A%0A';
+  message += '%0A';
   
+  message += GetLabel('product_list') + '%0A';
+  
+  // PRODUCT FORMAT: Number. Product name and code in ONE LINE
+  // Then Quantity, Price, Total in ONE LINE
   products.forEach((product, index) => {
-    message += '--------------------------%0A';
-    message += (index + 1) + '. ' + product.name + '%0A';
-    message += GetLabel('code_label') + ': ' + product.code + '%0A';
-    message += GetLabel('quantity_label') + ': ' + product.qty + '%0A';
-    message += GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
-    message += GetLabel('total_label') + ': ' + product.total.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
-    if (product.imageUrl) {
-      message += '??? ' + product.imageUrl + '%0A';
-    }
-    message += '%0A';
+    // Line 1: Number. Product name - Code
+    message += (index + 1) + '. ' + product.name + ' - ' + GetLabel('code_label') + ': ' + product.code + '%0A';
+    
+    // Line 2: Quantity, Price, Total (all in one line)
+    message += '   ' + GetLabel('quantity_label') + ': ' + product.qty + ' - ' + 
+                GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' ' + GetLabel('dinar') + ' - ' + 
+                GetLabel('total_label') + ': ' + product.total.toLocaleString() + ' ' + GetLabel('dinar') + '%0A%0A';
   });
   
   message += '-----------------------%0A';
-  message += '?? ' + GetLabel('total_quantity') + ': ' + totalQty + '%0A';
-  message += '?? ' + GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
+  message += GetLabel('total_quantity') + ': ' + totalQty + '%0A';
+  message += GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
   message += '-----------------------%0A%0A';
-  message += '? Thank you for your order!';
+  message += 'سوباس بو داواکاريه که ت';
   
   const phoneNumber = '9647501061451';
   const whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
