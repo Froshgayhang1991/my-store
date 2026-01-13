@@ -139,7 +139,7 @@ window.labels = {
   'select_product': 'تکایە کاڵایەک هەڵبژێرە',
   'new_order': 'داواکاری نوێ',
   'product_list': 'لیستی کاڵاکان',
-  'total_label': 'کۆی گشتی',
+  'total_label': 'کۆ',
   'total_price': 'کۆی نرخ',
   'dinar': 'دینار',
   'success_msg': 'فرۆشگا بەسەرکەوتوی دروستکرا',
@@ -173,7 +173,8 @@ window.labels = {
   'code_too_short': 'تکایە ٤ ژمارە بنووسە',
   'agent_alert_msg': 'تکایە یەکەم کۆدی کڕیار بنووسە',
   'enter_last_four_digits': 'کۆتا ٤ ژمارەى موبایلەکەت بنووسە',
-  'enter_code_labelagent': 'کۆتا ٤ ژمارەى موبایلەکەت بنووسە'
+  'enter_code_labelagent': 'کۆتا ٤ ژمارەى موبایلەکەت بنووسە',
+  'thanks': 'سوپاس بۆ پێشکەش کردنى داواکاریەکەت'
 };
 </script>
 </head>
@@ -601,7 +602,10 @@ function sendToWhatsApp() {
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
   
   // KURDISH FORMAT USING LABELS
-  let message = GetLabel('new_order') + '%0A';
+  let message = '';
+  
+  // ALL PRODUCTS START FROM THE BEGINNING
+  message += GetLabel('new_order') + '%0A';
   message += ' ' + date + ' - ' + time + '%0A';
   message += '%0A';
   
@@ -612,6 +616,7 @@ function sendToWhatsApp() {
   message += '%0A';
   
   message += GetLabel('product_list') + '%0A';
+  message += '______________' + '%0A';
   
   // PRODUCT FORMAT: Number. Product name and code in ONE LINE
   // Then Quantity, Price, Total in ONE LINE
@@ -621,15 +626,19 @@ function sendToWhatsApp() {
     
     // Line 2: Quantity, Price, Total (all in one line)
     message += '   ' + GetLabel('quantity_label') + ': ' + product.qty + ' - ' + 
-                GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' ' + GetLabel('dinar') + ' - ' + 
-                GetLabel('total_label') + ': ' + product.total.toLocaleString() + ' ' + GetLabel('dinar') + '%0A%0A';
+                GetLabel('price_label') + ': ' + product.price.toLocaleString()  + ' - ' + 
+                GetLabel('total_label') + ': ' + product.total.toLocaleString()  + '%0A';
+    
+    // LINE BETWEEN PRODUCTS - NO GAP
+    if (index < products.length - 1) {
+      message += '_________________________' + '%0A';
+    }
   });
   
-  message += '-----------------------%0A';
+  message += '-------------------------------------%0A';
   message += GetLabel('total_quantity') + ': ' + totalQty + '%0A';
   message += GetLabel('total_price') + ': ' + totalPrice.toLocaleString() + ' ' + GetLabel('dinar') + '%0A';
-  message += '-----------------------%0A%0A';
-  message += 'سوباس بو داواکاريه که ت';
+  message += '-------------------------------------%0A%0A';  message += GetLabel('thanks') + '%0A';
   
   const phoneNumber = '9647501061451';
   const whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
