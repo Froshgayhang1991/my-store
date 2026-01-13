@@ -154,7 +154,7 @@ window.labels = {
   'welcome_message': 'Welcome to our online store',
   'success_msg': 'created successfully!',
   'select_category_msg': 'لە خوارەوە جۆرى کاڵا هەڵبژێرە',
-  'confirm_send_order': 'دڵنیاى لەناردنى ئەم پسسووڵەیە؟',
+  'confirm_send_order': 'ڕازیت بەناردنى {0} کاڵا بۆ واتساپ؟',
   'show_invoice': 'پسووڵەکەت',
   'invoice_title': 'پسووڵەی داواکاری',
   'cancel_btn': 'پاشگەزبوونەوە',
@@ -606,10 +606,10 @@ function sendToWhatsApp() {
   const agentMobile = selectedOption.dataset.mobile;
   const agentAddress = selectedOption.dataset.address;
   
-  // Ask for confirmation
-  const confirmSend = confirm('????? ???????? ' + products.length + ' ???? ?? ???????');
+  // Ask for confirmation with dynamic product count
+  const confirmMessage = GetLabel('confirm_send_order').replace('{0}', products.length);
+  const confirmSend = confirm(confirmMessage);
   if (!confirmSend) return;
-  
   // Get date and time
   const now = new Date();
   const date = now.toLocaleDateString('en-GB');
