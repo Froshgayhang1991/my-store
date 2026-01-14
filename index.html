@@ -635,8 +635,8 @@ function sendToWhatsApp() {
   
   // Add products
   products.forEach((product, index) => {
-    message += (index + 1) + '. ' + product.name + ' - ' + GetLabel('code_label') + ': ' + product.code + '%0A';
-    message += '   ' + GetLabel('quantity_label') + ': ' + product.qty + ' - ' +
+    message += '[' + (index + 1) + '] - ' + product.name + ' - ' + product.code + '%0A';
+    message += '   ' + GetLabel('quantity_label') + ': (' + product.qty + ') - ' +
                 GetLabel('price_label') + ': ' + product.price.toLocaleString() + ' - ' +
                 GetLabel('total_label') + ': ' + product.total.toLocaleString() + '%0A';
   });
