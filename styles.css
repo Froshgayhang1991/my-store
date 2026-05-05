@@ -259,7 +259,7 @@ h1 { text-align: center; font-size: 58px; font-weight: 900; color: #FFFFFF; text
   .ticker-label-text { display: none; }
   .ticker-label-icon { font-size: 16px; }
   .ticker-count-box { padding: 0 8px; }
-  .ticker-track { animation: ticker-scroll 25s linear infinite; -webkit-animation: ticker-scroll 25s linear infinite; }
+  .ticker-track { animation: ticker-scroll 40s linear infinite; -webkit-animation: ticker-scroll 25s linear infinite; }
   body { padding: 10px; padding-top: 70px !important; padding-bottom: 150px; }
   h1 { font-size: 32px; }
   .store-subtitle { font-size: 18px; padding: 8px 20px; }
