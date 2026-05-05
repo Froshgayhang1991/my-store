@@ -43,7 +43,7 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
-  animation: ticker-scroll 40s linear infinite;
+  animation: ticker-scroll 80s linear infinite;
   gap: 0;
   will-change: transform;
   transform: translateZ(0);
