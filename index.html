@@ -78,11 +78,11 @@ window.labels = {
   </div>
   <div class='ticker-track-outer'>
     <div class='ticker-track' id='tickerTrack'>
-      <span class='ticker-item' onclick='scrollToProduct("S326.3")'><img src='images/S326.3.jpg' alt='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>ساردى شووشەى  RC  ڕەش ٢٥٠ ى</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: S326.3</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span><span class='ticker-item' onclick='scrollToProduct("S326.3")'><img src='images/S326.3.jpg' alt='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>ساردى شووشەى  RC  ڕەش ٢٥٠ ى</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: S326.3</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span>
+      <span class='ticker-item' onclick='scrollToProduct("G456.4")'><img src='images/G456.4.jpg' alt='مادەری ٢٥٠ ی هەنگ وین' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>مادەری ٢٥٠ ی هەنگ وین</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: G456.4</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span><span class='ticker-item' onclick='scrollToProduct("S326.3")'><img src='images/S326.3.jpg' alt='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>ساردى شووشەى  RC  ڕەش ٢٥٠ ى</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: S326.3</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span><span class='ticker-item' onclick='scrollToProduct("G456.4")'><img src='images/G456.4.jpg' alt='مادەری ٢٥٠ ی هەنگ وین' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>مادەری ٢٥٠ ی هەنگ وین</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: G456.4</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span><span class='ticker-item' onclick='scrollToProduct("S326.3")'><img src='images/S326.3.jpg' alt='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' class='ticker-img' onerror='this.style.display="none"'><span class='ticker-name'>ساردى شووشەى  RC  ڕەش ٢٥٠ ى</span><span class='ticker-sep'>|</span><span class='ticker-code'>کۆد: S326.3</span><span class='ticker-sep'>|</span><span class='ticker-price'>6,500 دینار</span></span><span class='ticker-divider'>&#10022;</span>
     </div>
   </div>
   <div class='ticker-count-box'>
-    <span>1</span>
+    <span>2</span>
   </div>
 </div>
 <div class='container'>
@@ -817,14 +817,35 @@ data-lastfour='2969'>
 <button type='button' class='category-btn' onclick='return showCategory(event, "بابەتە جیاوازەکان")'>
 بابەتە جیاوازەکان
 </button>
-<button type='button' class='category-btn new-products-btn' data-count='1' onclick='return showCategory(event, "NEW_PRODUCTS")'>
+<button type='button' class='category-btn new-products-btn' data-count='2' onclick='return showCategory(event, "NEW_PRODUCTS")'>
 کاڵای نوێ
- <span class='new-count'>(1)</span>
+ <span class='new-count'>(2)</span>
 </button>
 </div></div>
 <div class='category-section hidden' data-category='NEW_PRODUCTS'>
 <h2 class='category-header'>کاڵای نوێ</h2>
 <div class='products-grid'>
+<div class='product' data-code='G456.4'>
+<div class='product-image-container'>
+<img src='images/G456.4.jpg' alt='مادەری ٢٥٠ ی هەنگ وین' class='product-image' loading='lazy' onerror='this.style.display="none"'>
+</div>
+<div class='product-info'>
+<h3 class='product-name'>مادەری ٢٥٠ ی هەنگ وین</h3>
+<div class='product-details'>
+<p><strong>کۆد:</strong> G456.4</p>
+<p class='price'><strong>نرخ:</strong> 6,500 دینار</p>
+<p><strong>دانەى ناو کارتۆن:</strong> 30</p>
+</div>
+<div class='quantity-section'>
+<label>بڕ:</label>
+<div class='quantity-controls'>
+<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
+<input type='number' class='quantity' id='qty_10001' data-code='G456.4' data-name='مادەری ٢٥٠ ی هەنگ وین' data-price='6500' data-image='images/G456.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
+<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
+</div>
+</div>
+</div></div>
 <div class='product' data-code='S326.3'>
 <div class='product-image-container'>
 <img src='images/S326.3.jpg' alt='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' class='product-image' loading='lazy' onerror='this.style.display="none"'>
@@ -840,7 +861,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_10001' data-code='S326.3' data-name='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' data-price='6500' data-image='images/S326.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_10002' data-code='S326.3' data-name='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' data-price='6500' data-image='images/S326.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8423,6 +8444,27 @@ data-lastfour='2969'>
 </div>
 </div>
 </div></div>
+<div class='product' data-code='G456.4'>
+<div class='product-image-container'>
+<img src='images/G456.4.jpg' alt='مادەری ٢٥٠ ی هەنگ وین' class='product-image' loading='lazy' onerror='this.style.display="none"'>
+</div>
+<div class='product-info'>
+<h3 class='product-name'>مادەری ٢٥٠ ی هەنگ وین</h3>
+<div class='product-details'>
+<p><strong>کۆد:</strong> G456.4</p>
+<p class='price'><strong>نرخ:</strong> 6,500 دینار</p>
+<p><strong>دانەى ناو کارتۆن:</strong> 30</p>
+</div>
+<div class='quantity-section'>
+<label>بڕ:</label>
+<div class='quantity-controls'>
+<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
+<input type='number' class='quantity' id='qty_361' data-code='G456.4' data-name='مادەری ٢٥٠ ی هەنگ وین' data-price='6500' data-image='images/G456.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
+<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
+</div>
+</div>
+</div></div>
 <div class='product' data-code='G121'>
 <div class='product-image-container'>
 <img src='images/G121.jpg' alt='هۆڵیدەى ئەردەنىى شوکوجامبۆى ٢٥٠ى قاوە' class='product-image' loading='lazy' onerror='this.style.display="none"'>
@@ -8438,7 +8480,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_361' data-code='G121' data-name='هۆڵیدەى ئەردەنىى شوکوجامبۆى ٢٥٠ى قاوە' data-price='5250' data-image='images/G121.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_362' data-code='G121' data-name='هۆڵیدەى ئەردەنىى شوکوجامبۆى ٢٥٠ى قاوە' data-price='5250' data-image='images/G121.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8459,7 +8501,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_362' data-code='G123' data-name='هۆڵیدەى ئەردەنىى شوکوجامبۆى ٢٥٠ى منداڵ' data-price='5250' data-image='images/G123.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_363' data-code='G123' data-name='هۆڵیدەى ئەردەنىى شوکوجامبۆى ٢٥٠ى منداڵ' data-price='5250' data-image='images/G123.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8480,7 +8522,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_363' data-code='G1.6.9' data-name='وەڵکەرى فستقى پاقلاوەى  ٢٤عدد' data-price='5000' data-image='images/G1.6.9.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_364' data-code='G1.6.9' data-name='وەڵکەرى فستقى پاقلاوەى  ٢٤عدد' data-price='5000' data-image='images/G1.6.9.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8501,7 +8543,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_364' data-code='G105' data-name='کرێمدارى Orenio ى ڕەشى تەخت ٢٥٠ى' data-price='5000' data-image='images/G105.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_365' data-code='G105' data-name='کرێمدارى Orenio ى ڕەشى تەخت ٢٥٠ى' data-price='5000' data-image='images/G105.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8522,7 +8564,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_365' data-code='G76' data-name='کرێمدارى آدرینى ١١٠غرامى أنواع' data-price='5250' data-image='images/G76.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_366' data-code='G76' data-name='کرێمدارى آدرینى ١١٠غرامى أنواع' data-price='5250' data-image='images/G76.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8543,7 +8585,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_366' data-code='G75' data-name='کرێمدارى آدرینى ١١٠غرامى پرتقاڵ' data-price='5250' data-image='images/G75.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_367' data-code='G75' data-name='کرێمدارى آدرینى ١١٠غرامى پرتقاڵ' data-price='5250' data-image='images/G75.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8564,7 +8606,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_367' data-code='G77' data-name='کرێمدارى آدرینى ١١٠غرامى مۆز' data-price='5250' data-image='images/G77.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_368' data-code='G77' data-name='کرێمدارى آدرینى ١١٠غرامى مۆز' data-price='5250' data-image='images/G77.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8585,7 +8627,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_368' data-code='G50.1' data-name='کرێمدارى نظرى گوێز٢٥٠ى' data-price='5250' data-image='images/G50.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_369' data-code='G50.1' data-name='کرێمدارى نظرى گوێز٢٥٠ى' data-price='5250' data-image='images/G50.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8606,7 +8648,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_369' data-code='G50.3' data-name='کرێمدارى نظرى ڕەش٢٥٠ى' data-price='5250' data-image='images/G50.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_370' data-code='G50.3' data-name='کرێمدارى نظرى ڕەش٢٥٠ى' data-price='5250' data-image='images/G50.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8627,7 +8669,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_370' data-code='G50.2' data-name='کرێمدارى نظرى کارامێڵ٢٥٠ى' data-price='5250' data-image='images/G50.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_371' data-code='G50.2' data-name='کرێمدارى نظرى کارامێڵ٢٥٠ى' data-price='5250' data-image='images/G50.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8648,7 +8690,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_371' data-code='G85' data-name='کرێمدارى ڕیۆى ڤانیلاى تەخت' data-price='5250' data-image='images/G85.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_372' data-code='G85' data-name='کرێمدارى ڕیۆى ڤانیلاى تەخت' data-price='5250' data-image='images/G85.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8669,7 +8711,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_372' data-code='G132' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى  قاوە' data-price='5250' data-image='images/G132.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_373' data-code='G132' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى  قاوە' data-price='5250' data-image='images/G132.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8690,7 +8732,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_373' data-code='G130' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى  ڤانیلا' data-price='5250' data-image='images/G130.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_374' data-code='G130' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى  ڤانیلا' data-price='5250' data-image='images/G130.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8711,7 +8753,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_374' data-code='G131' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى فستق' data-price='5250' data-image='images/G131.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_375' data-code='G131' data-name='کرێمدارى ڕێۆى تەخت  ٢٥٠ى فستق' data-price='5250' data-image='images/G131.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8732,7 +8774,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_375' data-code='G449.4' data-name='کرێمداری مربعی پرتەقاڵ' data-price='5250' data-image='images/G449.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_376' data-code='G449.4' data-name='کرێمداری مربعی پرتەقاڵ' data-price='5250' data-image='images/G449.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8753,7 +8795,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_376' data-code='G449.2' data-name='کرێمداری مربعی شلک' data-price='5250' data-image='images/G449.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_377' data-code='G449.2' data-name='کرێمداری مربعی شلک' data-price='5250' data-image='images/G449.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8774,7 +8816,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_377' data-code='G449.3' data-name='کرێمداری مربعی گوێزهند' data-price='5250' data-image='images/G449.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_378' data-code='G449.3' data-name='کرێمداری مربعی گوێزهند' data-price='5250' data-image='images/G449.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8799,7 +8841,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_378' data-code='S108' data-name='ئاوى معدەنى دەبە ٠.٥لیترى ١٢عددى' data-price='1250' data-image='images/S108.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_379' data-code='S108' data-name='ئاوى معدەنى دەبە ٠.٥لیترى ١٢عددى' data-price='1250' data-image='images/S108.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8820,7 +8862,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_379' data-code='S106.1' data-name='بیبسى باریک ٥٠٠ى ئەصڵى' data-price='10500' data-image='images/S106.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_380' data-code='S106.1' data-name='بیبسى باریک ٥٠٠ى ئەصڵى' data-price='10500' data-image='images/S106.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8841,7 +8883,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_380' data-code='S266.1' data-name='بیبسى شووشەى٥٠٠ى بغدادى' data-price='9750' data-image='images/S266.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_381' data-code='S266.1' data-name='بیبسى شووشەى٥٠٠ى بغدادى' data-price='9750' data-image='images/S266.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8862,7 +8904,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_381' data-code='S96' data-name='بیبسى قەزەمى زیڕۆى ڕەش' data-price='6625' data-image='images/S96.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_382' data-code='S96' data-name='بیبسى قەزەمى زیڕۆى ڕەش' data-price='6625' data-image='images/S96.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8883,7 +8925,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_382' data-code='S308.2' data-name='بیپسى قوتوى قەڵەوى ٥٠٠ ى' data-price='9750' data-image='images/S308.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_383' data-code='S308.2' data-name='بیپسى قوتوى قەڵەوى ٥٠٠ ى' data-price='9750' data-image='images/S308.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8904,7 +8946,28 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_383' data-code='S73' data-name='بیپسی دەبەی ١٠٠٠ ی' data-price='4500' data-image='images/S73.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_384' data-code='S73' data-name='بیپسی دەبەی ١٠٠٠ ی' data-price='4500' data-image='images/S73.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
+<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
+</div>
+</div>
+</div></div>
+<div class='product' data-code='S276.1'>
+<div class='product-image-container'>
+<img src='images/S276.1.jpg' alt='بیپسی دەبەی گەورەی ١٢٥٠ ی' class='product-image' loading='lazy' onerror='this.style.display="none"'>
+</div>
+<div class='product-info'>
+<h3 class='product-name'>بیپسی دەبەی گەورەی ١٢٥٠ ی</h3>
+<div class='product-details'>
+<p><strong>کۆد:</strong> S276.1</p>
+<p class='price'><strong>نرخ:</strong> 6,375 دینار</p>
+<p><strong>دانەى ناو کارتۆن:</strong> 6</p>
+</div>
+<div class='quantity-section'>
+<label>بڕ:</label>
+<div class='quantity-controls'>
+<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
+<input type='number' class='quantity' id='qty_385' data-code='S276.1' data-name='بیپسی دەبەی گەورەی ١٢٥٠ ی' data-price='6375' data-image='images/S276.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8925,7 +8988,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_384' data-code='S273.1' data-name='بیپسی دەبەی وەسەت' data-price='6375' data-image='images/S273.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_386' data-code='S273.1' data-name='بیپسی دەبەی وەسەت' data-price='6375' data-image='images/S273.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8946,7 +9009,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_385' data-code='S266' data-name='بیپسی شوشەی ٥٠٠ ی هەرێم' data-price='10000' data-image='images/S266.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_387' data-code='S266' data-name='بیپسی شوشەی ٥٠٠ ی هەرێم' data-price='10000' data-image='images/S266.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8967,7 +9030,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_386' data-code='S272.1' data-name='بیپسی قەزەم' data-price='6500' data-image='images/S272.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_388' data-code='S272.1' data-name='بیپسی قەزەم' data-price='6500' data-image='images/S272.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -8988,7 +9051,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_387' data-code='S272.3' data-name='بیپسی قەزەمی بێ شەکرى سپى' data-price='6500' data-image='images/S272.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_389' data-code='S272.3' data-name='بیپسی قەزەمی بێ شەکرى سپى' data-price='6500' data-image='images/S272.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9009,7 +9072,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_388' data-code='S95.1' data-name='تایگەرى K9ى سوور' data-price='10000' data-image='images/S95.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_390' data-code='S95.1' data-name='تایگەرى K9ى سوور' data-price='10000' data-image='images/S95.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9030,7 +9093,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_389' data-code='S95.2' data-name='تایگەرى K9ى سەوز' data-price='10000' data-image='images/S95.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_391' data-code='S95.2' data-name='تایگەرى K9ى سەوز' data-price='10000' data-image='images/S95.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9051,7 +9114,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_390' data-code='S94.1' data-name='تایگەرى K9ىسپى' data-price='10000' data-image='images/S94.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_392' data-code='S94.1' data-name='تایگەرى K9ىسپى' data-price='10000' data-image='images/S94.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9072,7 +9135,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_391' data-code='S286.7' data-name='تایگەرى مکسیکى بلوبێرى تازە ٧٥٠ى' data-price='14500' data-image='images/S286.7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_393' data-code='S286.7' data-name='تایگەرى مکسیکى بلوبێرى تازە ٧٥٠ى' data-price='14500' data-image='images/S286.7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9093,7 +9156,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_392' data-code='S15' data-name='تایگەری ئاسانی ئەنواع' data-price='10000' data-image='images/S15.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_394' data-code='S15' data-name='تایگەری ئاسانی ئەنواع' data-price='10000' data-image='images/S15.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9114,7 +9177,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_393' data-code='S12' data-name='تایگەری ئاسانی پەمەیی' data-price='10000' data-image='images/S12.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_395' data-code='S12' data-name='تایگەری ئاسانی پەمەیی' data-price='10000' data-image='images/S12.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9135,7 +9198,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_394' data-code='S14.1' data-name='تایگەری ئاسانی سەوزى زیڕۆ' data-price='10000' data-image='images/S14.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_396' data-code='S14.1' data-name='تایگەری ئاسانی سەوزى زیڕۆ' data-price='10000' data-image='images/S14.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9156,7 +9219,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_395' data-code='S13' data-name='تایگەری ئاسانی ڕەش(سور)' data-price='10000' data-image='images/S13.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_397' data-code='S13' data-name='تایگەری ئاسانی ڕەش(سور)' data-price='10000' data-image='images/S13.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9177,7 +9240,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_396' data-code='S11' data-name='تایگەری ئاسانی کۆکتێل' data-price='10000' data-image='images/S11.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_398' data-code='S11' data-name='تایگەری ئاسانی کۆکتێل' data-price='10000' data-image='images/S11.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9198,7 +9261,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_397' data-code='S271' data-name='تایگەری ئەصڵی قوتو' data-price='21000' data-image='images/S271.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_399' data-code='S271' data-name='تایگەری ئەصڵی قوتو' data-price='21000' data-image='images/S271.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9219,7 +9282,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_398' data-code='S286' data-name='تایگەری مەکسیکی ئەنواع' data-price='14500' data-image='images/S286.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_400' data-code='S286' data-name='تایگەری مەکسیکی ئەنواع' data-price='14500' data-image='images/S286.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9240,7 +9303,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_399' data-code='S286.2' data-name='تایگەری مەکسیکی بنێشت' data-price='14500' data-image='images/S286.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_401' data-code='S286.2' data-name='تایگەری مەکسیکی بنێشت' data-price='14500' data-image='images/S286.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9261,7 +9324,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_400' data-code='S286.3' data-name='تایگەری مەکسیکی شلک' data-price='14500' data-image='images/S286.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_402' data-code='S286.3' data-name='تایگەری مەکسیکی شلک' data-price='14500' data-image='images/S286.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9282,7 +9345,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_401' data-code='S286.4' data-name='تایگەری مەکسیکی لیمۆ' data-price='14500' data-image='images/S286.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_403' data-code='S286.4' data-name='تایگەری مەکسیکی لیمۆ' data-price='14500' data-image='images/S286.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9303,7 +9366,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_402' data-code='S52' data-name='تۆرابی شوشەئەصڵى' data-price='9500' data-image='images/S52.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_404' data-code='S52' data-name='تۆرابی شوشەئەصڵى' data-price='9500' data-image='images/S52.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9324,7 +9387,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_403' data-code='S310' data-name='دانیەی قەزەم' data-price='5500' data-image='images/S310.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_405' data-code='S310' data-name='دانیەی قەزەم' data-price='5500' data-image='images/S310.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9345,7 +9408,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_404' data-code='S273' data-name='دیو و بیپسی وەسەت' data-price='6375' data-image='images/S273.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_406' data-code='S273' data-name='دیو و بیپسی وەسەت' data-price='6375' data-image='images/S273.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9366,7 +9429,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_405' data-code='S106.2' data-name='دیوى باریکى ٥٠٠ى أصلى' data-price='10500' data-image='images/S106.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_407' data-code='S106.2' data-name='دیوى باریکى ٥٠٠ى أصلى' data-price='10500' data-image='images/S106.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9387,7 +9450,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_406' data-code='S260.1' data-name='دیوى شووشەى ٥٠٠ى هەرێم' data-price='10000' data-image='images/S97.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_408' data-code='S260.1' data-name='دیوى شووشەى ٥٠٠ى هەرێم' data-price='10000' data-image='images/S97.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9408,7 +9471,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_407' data-code='S72' data-name='دیوی دەبەی ١٠٠٠ ی' data-price='4500' data-image='images/S72.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_409' data-code='S72' data-name='دیوی دەبەی ١٠٠٠ ی' data-price='4500' data-image='images/S72.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9429,7 +9492,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_408' data-code='S276' data-name='دیوی دەبەی گەورەی ١٢٥٠ ی' data-price='6375' data-image='images/S276.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_410' data-code='S276' data-name='دیوی دەبەی گەورەی ١٢٥٠ ی' data-price='6375' data-image='images/S276.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9450,7 +9513,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_409' data-code='S273.2' data-name='دیوی دەبەی وەسەت' data-price='6375' data-image='images/S273.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_411' data-code='S273.2' data-name='دیوی دەبەی وەسەت' data-price='6375' data-image='images/S273.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9471,7 +9534,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_410' data-code='S260' data-name='دیوی شوشەى ٥٠٠ ى بغدادى' data-price='9750' data-image='images/S260.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_412' data-code='S260' data-name='دیوی شوشەى ٥٠٠ ى بغدادى' data-price='9750' data-image='images/S260.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9492,7 +9555,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_411' data-code='S308.1' data-name='دیوی قوتوی قەڵەوى ٥٠٠ ى' data-price='9750' data-image='images/S308.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_413' data-code='S308.1' data-name='دیوی قوتوی قەڵەوى ٥٠٠ ى' data-price='9750' data-image='images/S308.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9513,7 +9576,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_412' data-code='S272.2' data-name='دیوی قەزەمی قوتوی ٢٥٠ ی' data-price='6500' data-image='images/S272.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_414' data-code='S272.2' data-name='دیوی قەزەمی قوتوی ٢٥٠ ی' data-price='6500' data-image='images/S272.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9534,7 +9597,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_413' data-code='S6.1' data-name='ریدی باریكی بنێشت' data-price='9500' data-image='images/S6.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_415' data-code='S6.1' data-name='ریدی باریكی بنێشت' data-price='9500' data-image='images/S6.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9555,7 +9618,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_414' data-code='S6' data-name='ریدی باریكی سادە' data-price='9500' data-image='images/S6.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_416' data-code='S6' data-name='ریدی باریكی سادە' data-price='9500' data-image='images/S6.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9576,7 +9639,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_415' data-code='S277.4' data-name='زاکى پاکەتى ئەنواع' data-price='5750' data-image='images/S277.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_417' data-code='S277.4' data-name='زاکى پاکەتى ئەنواع' data-price='5750' data-image='images/S277.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9597,7 +9660,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_416' data-code='S277.2' data-name='زاکی پاکەتی پەتەقاڵ' data-price='5750' data-image='images/S277.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_418' data-code='S277.2' data-name='زاکی پاکەتی پەتەقاڵ' data-price='5750' data-image='images/S277.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9618,7 +9681,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_417' data-code='S277.5' data-name='زاکی پاکەتی میوە' data-price='5750' data-image='images/S277.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_419' data-code='S277.5' data-name='زاکی پاکەتی میوە' data-price='5750' data-image='images/S277.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9639,7 +9702,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_418' data-code='S99' data-name='زەمزەمى ١٢عددى شووشەى ڕەش' data-price='7000' data-image='images/S99.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_420' data-code='S99' data-name='زەمزەمى ١٢عددى شووشەى ڕەش' data-price='7000' data-image='images/S99.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9660,7 +9723,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_419' data-code='S326.3' data-name='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' data-price='6500' data-image='images/S326.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_421' data-code='S326.3' data-name='ساردى شووشەى  RC  ڕەش ٢٥٠ ى' data-price='6500' data-image='images/S326.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9681,7 +9744,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_420' data-code='S19' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی پرتەقاڵ' data-price='6500' data-image='images/S19.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_422' data-code='S19' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی پرتەقاڵ' data-price='6500' data-image='images/S19.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9702,7 +9765,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_421' data-code='S20' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی شین' data-price='6500' data-image='images/S20.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_423' data-code='S20' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی شین' data-price='6500' data-image='images/S20.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9723,7 +9786,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_422' data-code='S20.2' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی گازۆز' data-price='6500' data-image='images/S20.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_424' data-code='S20.2' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی گازۆز' data-price='6500' data-image='images/S20.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9744,7 +9807,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_423' data-code='S19.2' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی لیمۆ' data-price='6500' data-image='images/S19.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_425' data-code='S19.2' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی لیمۆ' data-price='6500' data-image='images/S19.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9765,7 +9828,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_424' data-code='S19.1' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی ڕەش' data-price='6500' data-image='images/S19.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_426' data-code='S19.1' data-name='ساردی شوشەی ئارسۆی ٢٥٠ ی ڕەش' data-price='6500' data-image='images/S19.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9786,7 +9849,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_425' data-code='S263' data-name='ساندیسى میوەکیس٢٥٠ى' data-price='6000' data-image='images/S263.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_427' data-code='S263' data-name='ساندیسى میوەکیس٢٥٠ى' data-price='6000' data-image='images/S263.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9807,7 +9870,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_426' data-code='S349.1' data-name='شیر قاوەى پاکەتى٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S349.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_428' data-code='S349.1' data-name='شیر قاوەى پاکەتى٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S349.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9828,7 +9891,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_427' data-code='S348' data-name='شیرشلک پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S348.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_429' data-code='S348' data-name='شیرشلک پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S348.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9849,7 +9912,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_428' data-code='S279.5' data-name='شیرمۆزى دەبەى ٢٥٠ى طيوالشام' data-price='4500' data-image='images/S279.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_430' data-code='S279.5' data-name='شیرمۆزى دەبەى ٢٥٠ى طيوالشام' data-price='4500' data-image='images/S279.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9870,7 +9933,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_429' data-code='S347' data-name='شیرمۆزی پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S347.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_431' data-code='S347' data-name='شیرمۆزی پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S347.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9891,7 +9954,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_430' data-code='S279' data-name='شیرمۆزی دەبەی ٢٥٠ ی طور الشامی ئەنواع' data-price='4500' data-image='images/S279.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_432' data-code='S279' data-name='شیرمۆزی دەبەی ٢٥٠ ی طور الشامی ئەنواع' data-price='4500' data-image='images/S279.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9912,7 +9975,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_431' data-code='S349' data-name='شیرى سادە پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S349.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_433' data-code='S349' data-name='شیرى سادە پاکەتی٢٥٠ی ندى ١٨عدد' data-price='3750' data-image='images/S349.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9933,7 +9996,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_432' data-code='S279.4' data-name='شیرکاکاوى دەبەی ٢٥٠ ی طور الشام' data-price='4500' data-image='images/S279.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_434' data-code='S279.4' data-name='شیرکاکاوى دەبەی ٢٥٠ ی طور الشام' data-price='4500' data-image='images/S279.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9954,7 +10017,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_433' data-code='S279.3' data-name='شیرکاڵەکى دەبەی ٢٥٠ ی طور الشام' data-price='4500' data-image='images/S279.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_435' data-code='S279.3' data-name='شیرکاڵەکى دەبەی ٢٥٠ ی طور الشام' data-price='4500' data-image='images/S279.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9975,7 +10038,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_434' data-code='S350' data-name='شیری پاکەتی٢٥٠ی ندى ١٨عدد ئەنواع' data-price='3750' data-image='images/S350.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_436' data-code='S350' data-name='شیری پاکەتی٢٥٠ی ندى ١٨عدد ئەنواع' data-price='3750' data-image='images/S350.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -9996,7 +10059,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_435' data-code='S346' data-name='شەربەتى  GOLDEN ى  ئەنواع ٥٠٠ ى' data-price='10000' data-image='images/S346.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_437' data-code='S346' data-name='شەربەتى  GOLDEN ى  ئەنواع ٥٠٠ ى' data-price='10000' data-image='images/S346.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10017,7 +10080,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_436' data-code='S343' data-name='شەربەتى  GOLDEN ى  پرتەقاڵ ٥٠٠ ى' data-price='10000' data-image='images/S343.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_438' data-code='S343' data-name='شەربەتى  GOLDEN ى  پرتەقاڵ ٥٠٠ ى' data-price='10000' data-image='images/S343.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10038,7 +10101,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_437' data-code='S344' data-name='شەربەتى  GOLDEN ى  قۆخ ٥٠٠ ى' data-price='10000' data-image='images/S344.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_439' data-code='S344' data-name='شەربەتى  GOLDEN ى  قۆخ ٥٠٠ ى' data-price='10000' data-image='images/S344.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10059,7 +10122,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_438' data-code='S345' data-name='شەربەتى  GOLDEN ى  هەنار ٥٠٠ ى' data-price='10000' data-image='images/S345.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_440' data-code='S345' data-name='شەربەتى  GOLDEN ى  هەنار ٥٠٠ ى' data-price='10000' data-image='images/S345.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10080,7 +10143,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_439' data-code='S15.6' data-name='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد  قۆخ گێڵاس' data-price='10000' data-image='images/S15.6.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_441' data-code='S15.6' data-name='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد  قۆخ گێڵاس' data-price='10000' data-image='images/S15.6.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10101,28 +10164,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_440' data-code='S15.7' data-name='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد  میوە' data-price='10000' data-image='images/S15.7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
-<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
-<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
-</div>
-</div>
-</div></div>
-<div class='product' data-code='S15.4'>
-<div class='product-image-container'>
-<img src='images/S15.4.jpg' alt='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد پرتەقاڵ شلک' class='product-image' loading='lazy' onerror='this.style.display="none"'>
-</div>
-<div class='product-info'>
-<h3 class='product-name'>شەربەتى ئاسان ٣٣٠ مل ٢٤عدد پرتەقاڵ شلک</h3>
-<div class='product-details'>
-<p><strong>کۆد:</strong> S15.4</p>
-<p class='price'><strong>نرخ:</strong> 10,000 دینار</p>
-<p><strong>دانەى ناو کارتۆن:</strong> 24</p>
-</div>
-<div class='quantity-section'>
-<label>بڕ:</label>
-<div class='quantity-controls'>
-<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_441' data-code='S15.4' data-name='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد پرتەقاڵ شلک' data-price='10000' data-image='images/S15.4.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_442' data-code='S15.7' data-name='شەربەتى ئاسان ٣٣٠ مل ٢٤عدد  میوە' data-price='10000' data-image='images/S15.7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10143,7 +10185,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_442' data-code='S15.5' data-name='شەربەتى ئاسان٣٣٠ مل٢٤عدد سێو و مۆزوهەرمێ' data-price='10000' data-image='images/S15.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_443' data-code='S15.5' data-name='شەربەتى ئاسان٣٣٠ مل٢٤عدد سێو و مۆزوهەرمێ' data-price='10000' data-image='images/S15.5.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10164,7 +10206,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_443' data-code='S331' data-name='شەربەتى لووسى پاکەت (ئەنواع)٢٥٠ى' data-price='5250' data-image='images/S331.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_444' data-code='S331' data-name='شەربەتى لووسى پاکەت (ئەنواع)٢٥٠ى' data-price='5250' data-image='images/S331.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10185,7 +10227,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_444' data-code='S330' data-name='شەربەتى لووسى پاکەت (ترێ)٢٥٠ى' data-price='5250' data-image='images/S330.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_445' data-code='S330' data-name='شەربەتى لووسى پاکەت (ترێ)٢٥٠ى' data-price='5250' data-image='images/S330.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10206,7 +10248,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_445' data-code='S328' data-name='شەربەتى لووسى پاکەت (قۆخ)٢٥٠ى' data-price='5250' data-image='images/S328.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_446' data-code='S328' data-name='شەربەتى لووسى پاکەت (قۆخ)٢٥٠ى' data-price='5250' data-image='images/S328.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10227,7 +10269,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_446' data-code='S329.3' data-name='شەربەتى لووسى پاکەت (لیمۆبەصرە)٢٥٠ى' data-price='5250' data-image='images/S329.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_447' data-code='S329.3' data-name='شەربەتى لووسى پاکەت (لیمۆبەصرە)٢٥٠ى' data-price='5250' data-image='images/S329.3.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10248,7 +10290,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_447' data-code='S329' data-name='شەربەتى لووسى پاکەت (میوە)٢٥٠ى' data-price='5250' data-image='images/S329.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_448' data-code='S329' data-name='شەربەتى لووسى پاکەت (میوە)٢٥٠ى' data-price='5250' data-image='images/S329.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10269,7 +10311,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_448' data-code='S329.2' data-name='شەربەتى لووسى پاکەت (مەنگۆ)٢٥٠ى' data-price='5250' data-image='images/S329.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_449' data-code='S329.2' data-name='شەربەتى لووسى پاکەت (مەنگۆ)٢٥٠ى' data-price='5250' data-image='images/S329.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10290,7 +10332,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_449' data-code='S51' data-name='شەربەتی زوزوی پاکەتی ئەنواع' data-price='3250' data-image='images/S51.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_450' data-code='S51' data-name='شەربەتی زوزوی پاکەتی ئەنواع' data-price='3250' data-image='images/S51.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10311,7 +10353,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_450' data-code='S50' data-name='شەربەتی زوزوی پاکەتی پرتەقاڵ' data-price='3250' data-image='images/S50.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_451' data-code='S50' data-name='شەربەتی زوزوی پاکەتی پرتەقاڵ' data-price='3250' data-image='images/S50.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10332,7 +10374,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_451' data-code='S48' data-name='شەربەتی زوزوی پاکەتی قۆخ' data-price='3250' data-image='images/S48.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_452' data-code='S48' data-name='شەربەتی زوزوی پاکەتی قۆخ' data-price='3250' data-image='images/S48.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10353,7 +10395,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_452' data-code='S49' data-name='شەربەتی زوزوی پاکەتی میوە' data-price='3250' data-image='images/S49.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_453' data-code='S49' data-name='شەربەتی زوزوی پاکەتی میوە' data-price='3250' data-image='images/S49.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10374,7 +10416,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_453' data-code='S82' data-name='شەربەتی سەنماکی پاکەتی پرتەقاڵ' data-price='3250' data-image='images/S82.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_454' data-code='S82' data-name='شەربەتی سەنماکی پاکەتی پرتەقاڵ' data-price='3250' data-image='images/S82.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10395,7 +10437,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_454' data-code='S84' data-name='شەربەتی سەنماکی پاکەتی قۆخ' data-price='3250' data-image='images/S84.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_455' data-code='S84' data-name='شەربەتی سەنماکی پاکەتی قۆخ' data-price='3250' data-image='images/S84.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -10416,28 +10458,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_455' data-code='S83' data-name='شەربەتی سەنماکی پاکەتی میوە' data-price='3250' data-image='images/S83.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
-<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
-<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
-</div>
-</div>
-</div></div>
-<div class='product' data-code='S34'>
-<div class='product-image-container'>
-<img src='images/S34.jpg' alt='شەربەتی قوتوی مام زۆرابی مێوژ' class='product-image' loading='lazy' onerror='this.style.display="none"'>
-</div>
-<div class='product-info'>
-<h3 class='product-name'>شەربەتی قوتوی مام زۆرابی مێوژ</h3>
-<div class='product-details'>
-<p><strong>کۆد:</strong> S34</p>
-<p class='price'><strong>نرخ:</strong> 8,500 دینار</p>
-<p><strong>دانەى ناو کارتۆن:</strong> 24</p>
-</div>
-<div class='quantity-section'>
-<label>بڕ:</label>
-<div class='quantity-controls'>
-<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_456' data-code='S34' data-name='شەربەتی قوتوی مام زۆرابی مێوژ' data-price='8500' data-image='images/S34.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_456' data-code='S83' data-name='شەربەتی سەنماکی پاکەتی میوە' data-price='3250' data-image='images/S83.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -15898,27 +15919,6 @@ data-lastfour='2969'>
 </div>
 </div>
 </div></div>
-<div class='product' data-code='O29'>
-<div class='product-image-container'>
-<img src='images/O29.jpg' alt='قەزوانی سوێر' class='product-image' loading='lazy' onerror='this.style.display="none"'>
-</div>
-<div class='product-info'>
-<h3 class='product-name'>قەزوانی سوێر</h3>
-<div class='product-details'>
-<p><strong>کۆد:</strong> O29</p>
-<p class='price'><strong>نرخ:</strong> 8,750 دینار</p>
-<p><strong>دانەى ناو کارتۆن:</strong> 48</p>
-</div>
-<div class='quantity-section'>
-<label>بڕ:</label>
-<div class='quantity-controls'>
-<button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_716' data-code='O29' data-name='قەزوانی سوێر' data-price='8750' data-image='images/O29.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
-<button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
-<button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
-</div>
-</div>
-</div></div>
 <div class='product' data-code='O25'>
 <div class='product-image-container'>
 <img src='images/O25.jpg' alt='نانەقەیسی پانی ٢٠٠٠ ی' class='product-image' loading='lazy' onerror='this.style.display="none"'>
@@ -15934,7 +15934,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_717' data-code='O25' data-name='نانەقەیسی پانی ٢٠٠٠ ی' data-price='2000' data-image='images/O25.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_716' data-code='O25' data-name='نانەقەیسی پانی ٢٠٠٠ ی' data-price='2000' data-image='images/O25.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -15955,7 +15955,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_718' data-code='O18' data-name='نانەقەیسی لولەیی' data-price='5250' data-image='images/O18.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_717' data-code='O18' data-name='نانەقەیسی لولەیی' data-price='5250' data-image='images/O18.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -15976,7 +15976,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_719' data-code='O16' data-name='نانەقەیسی هەمپا' data-price='5000' data-image='images/O16.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_718' data-code='O16' data-name='نانەقەیسی هەمپا' data-price='5000' data-image='images/O16.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -15997,7 +15997,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_720' data-code='O14' data-name='نانەقەیسی کەبابی سادە' data-price='6500' data-image='images/O14.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_719' data-code='O14' data-name='نانەقەیسی کەبابی سادە' data-price='6500' data-image='images/O14.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16018,7 +16018,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_721' data-code='O15' data-name='نانەقەیسی کەبابی سور' data-price='6500' data-image='images/O15.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_720' data-code='O15' data-name='نانەقەیسی کەبابی سور' data-price='6500' data-image='images/O15.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16039,7 +16039,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_722' data-code='O54.1' data-name='ناوکى کەپسى داستان ٣٦عددى' data-price='6500' data-image='images/O54.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_721' data-code='O54.1' data-name='ناوکى کەپسى داستان ٣٦عددى' data-price='6500' data-image='images/O54.1.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16060,7 +16060,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_723' data-code='O28' data-name='ناوکی پاشا' data-price='5250' data-image='images/O28.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_722' data-code='O28' data-name='ناوکی پاشا' data-price='5250' data-image='images/O28.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16081,7 +16081,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_724' data-code='O20' data-name='هێلکەی باغەی تورکی' data-price='5000' data-image='images/O20.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_723' data-code='O20' data-name='هێلکەی باغەی تورکی' data-price='5000' data-image='images/O20.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16102,7 +16102,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_725' data-code='O47' data-name='هەنگوینى ئەسڵى پاڵفتە ١کغم' data-price='50000' data-image='images/O47.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_724' data-code='O47' data-name='هەنگوینى ئەسڵى پاڵفتە ١کغم' data-price='50000' data-image='images/O47.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16123,7 +16123,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_726' data-code='O56' data-name='کلێنسى ڵاین بەپارچە ١٠عددى' data-price='8000' data-image='images/O56.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_725' data-code='O56' data-name='کلێنسى ڵاین بەپارچە ١٠عددى' data-price='8000' data-image='images/O56.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16144,7 +16144,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_727' data-code='O55' data-name='کلێنسى ڵاین بەشەدە ٤عددى' data-price='32000' data-image='images/O55.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_726' data-code='O55' data-name='کلێنسى ڵاین بەشەدە ٤عددى' data-price='32000' data-image='images/O55.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16165,7 +16165,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_728' data-code='O53' data-name='کونجى داستانى ٣٦عددى سپى' data-price='6500' data-image='images/O53.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_727' data-code='O53' data-name='کونجى داستانى ٣٦عددى سپى' data-price='6500' data-image='images/O53.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16186,7 +16186,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_729' data-code='O54.2' data-name='کونجى داستانى ٣٦عددى شۆفان' data-price='6500' data-image='images/O54.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_728' data-code='O54.2' data-name='کونجى داستانى ٣٦عددى شۆفان' data-price='6500' data-image='images/O54.2.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16207,7 +16207,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_730' data-code='O52' data-name='کونجى داستانى ٣٦عددى ڕەش' data-price='6500' data-image='images/O52.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_729' data-code='O52' data-name='کونجى داستانى ٣٦عددى ڕەش' data-price='6500' data-image='images/O52.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16228,7 +16228,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_731' data-code='O12' data-name='کونجی داستانی سپی' data-price='3750' data-image='images/O12.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_730' data-code='O12' data-name='کونجی داستانی سپی' data-price='3750' data-image='images/O12.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16249,7 +16249,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_732' data-code='O23' data-name='کونجی گەورەی سپی' data-price='9500' data-image='images/O23.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_731' data-code='O23' data-name='کونجی گەورەی سپی' data-price='9500' data-image='images/O23.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16270,7 +16270,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_733' data-code='O22' data-name='کونجی گەورەی ڕەش' data-price='9500' data-image='images/O22.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_732' data-code='O22' data-name='کونجی گەورەی ڕەش' data-price='9500' data-image='images/O22.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
@@ -16291,7 +16291,7 @@ data-lastfour='2969'>
 <label>بڕ:</label>
 <div class='quantity-controls'>
 <button type='button' class='qty-btn plus' onclick='increaseQuantity(event, this)'>+</button>
-<input type='number' class='quantity' id='qty_734' data-code='O7' data-name='کەفی ئەصڵی' data-price='4750' data-image='images/O7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
+<input type='number' class='quantity' id='qty_733' data-code='O7' data-name='کەفی ئەصڵی' data-price='4750' data-image='images/O7.jpg' value='0' min='0' step='0.5' onchange='updateCart()'>
 <button type='button' class='qty-btn minus' onclick='decreaseQuantity(event, this)'>-</button>
 <button type='button' class='qty-btn half' onclick='addHalfQuantity(event, this)'>نیو کارتۆن</button>
 </div>
